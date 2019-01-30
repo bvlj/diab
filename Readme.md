@@ -18,6 +18,10 @@ for insulin dosages based on real-time context.
 It's also possible to integrate the app with other fitness services to share
 the data.
 
+[<img src="https://f-droid.org/badge/get-it-on.png"
+     alt="Get it on F-Droid"
+     height="80">](https://f-droid.org/packages/it.diab/)
+
 ## Features
 
 * Save records of glucose and insulin dosages
