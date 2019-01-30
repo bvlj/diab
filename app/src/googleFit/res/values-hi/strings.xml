@@ -1,0 +1,30 @@
+<!--
+  Copyright (c) 2018 Bevilacqua Joey
+
+  Licensed under the GNU GPLv3 license
+
+  The text of the license can be found in the LICENSE file
+  or at https://www.gnu.org/licenses/gpl.txt
+  -->
+<resources>
+
+    <string name="cancel">रद्द करे</string>
+
+    <string name="fit_status_prompt"><b>Google फ़िट</b> आपको कई ऐप और उपकरणों से अपनी फिटनेस और हेल्थ डेटा का बैकअप देता है। Google Fit और Diab को जोड़ने से, आप अपने <b>ग्लूकोज डेटा</b> का बैकअप ले पाएंगे।</string>
+    <string name="fit_status_connected">Diab <b>Google Fit</b> से जुड़ा है। आपका <b>ग्लूकोज</b> सिंक हो जाएगा।</string>
+    <string name="fit_button_connect">Google फ़िट से कनेक्ट करें</string>
+    <string name="fit_login_error">कार्रवाई विफल। इंटरनेट कनेक्शन की जांच करें और पुन: प्रयास करें</string>
+    <string name="fit_privacy">गोपनीयता और डेटा प्रबंधन</string>
+    <string name="fit_privacy_delete">सभी डेटा हटाएं</string>
+    <string name="fit_privacy_disconnect">फिट से डिस्कनेक्ट करे</string>
+    <string name="fit_delete_confirm_title">Fit डेटा हटाएं</string>
+    <string name="fit_delete_confirm_message">आप Google फ़िट से अपना ग्लूकोज़ इतिहास निकालने वाले हैं। यह ऑपरेशन पूर्ववत नहीं किया जा सकता है।\n
+  क्या आप आगे बढ़ना चाहते हैं?</string>
+    <string name="fit_delete_confim_positive">हटाएं</string>
+    <string name="fit_delete_success">फिट से डेटा हटा दिया गया है</string>
+    <string name="fit_delete_failure">फिट से डेटा निकालने में असमर्थ। बाद में कोशिश करें</string>
+    <string name="fit_disconnect_confim_title">फिट से डिस्कनेक्ट करे</string>
+    <string name="fit_disconnect_confim_message">आप Google फिट से डिस्कनेक्ट करने वाले हैं। ऐप अब नए ग्लूकोज डेटा को सिंक नहीं करेगा (मौजूदा वैल्यूज Google फ़िट पर बनाए रखा जाएगा)। क्या आप आगे बढ़ना चाहते हैं?</string>
+    <string name="fit_disconnect_confim_positive">अलग करे</string>
+    <string name="fit_disconnect_success">फिट से डाटा हटाया गया</string>
+</resources>

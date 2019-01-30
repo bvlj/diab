@@ -1,0 +1,123 @@
+<!--
+  Copyright (c) 2018 Bevilacqua Joey
+
+  Licensed under the GNU GPLv3 license
+
+  The text of the license can be found in the LICENSE file
+  or at https://www.gnu.org/licenses/gpl.txt
+  -->
+<resources>
+    <string name="app_name">Diab</string>
+    <string name="app_shortcut_add_glucose">ग्लूकोज जोड़ें</string>
+
+    <string name="save">संरक्षित करे</string>
+    <string name="saved">संरक्षित किया</string>
+    <string name="add">जोड़े</string>
+    <string name="remove">हटाए</string>
+    <string name="apply">लागू करें</string>
+    <string name="share">शेयर करे</string>
+
+    <string name="fragment_overview">अवलोकन</string>
+    <string name="fragment_glucose">Glucose</string>
+    <string name="fragment_insulin">Insulin</string>
+
+    <!-- Time -->
+    <string name="time_today">आज</string>
+    <string name="time_yesterday">कल</string>
+    <string name="time_last_x">अंतिम %1$</string>
+    <string name="time_day_month_short_format">dd MMM</string>
+    <string name="time_pick">एक और तारीख चुनें\\2026</string>
+
+    <!-- Time zone -->
+    <string name="time_extra">अतिरिक्त</string>
+    <string name="time_morning">सुबह</string>
+    <string name="time_late_morning">देर सुबह</string>
+    <string name="time_lunch">दोपहर का भोजन</string>
+    <string name="time_afternoon">दोपहर</string>
+    <string name="time_dinner">रात का खाना</string>
+    <string name="time_night">रात</string>
+
+    <!-- Overview -->
+    <string name="overview_last_desc">अंतिम मूल्य%1$s</string>
+    <string name="overview_last_fallback">Hello</string>
+    <string name="overview_last_desc_fallback">नीले बटन को छूकर एक मूल्य जोड़ें</string>
+
+    <!-- Insulin Editor -->
+    <string name="insulin_editor_add">इंसुलिन जोड़े</string>
+    <string name="insulin_editor_edit">इंसुलिन संपादित करें</string>
+    <string name="insulin_editor_name">नाम</string>
+    <string name="insulin_item_basal">Basal</string>
+    <string name="insulin_item_half_units">आधी इकाई</string>
+
+    <!-- Glucose Editor -->
+    <string name="glucose_editor_time_dialog">समय चुने</string>
+    <string name="glucose_editor_insulin_add">इंसुलिन जोड़ें</string>
+    <string name="glucose_editor_basal_add">बेसल जोड़ें</string>
+    <string name="glucose_editor_insulin_value">मात्रा</string>
+    <string name="glucose_editor_save_error">मूल्यों को फिर से जांचें</string>
+    <string name="glucose_editor_no_insulin">कोई इंसुलिन नहीं मिला</string>
+
+    <!-- Glucose suggestions -->
+    <string name="insulin_suggestion_loading">लोड हो रहा है</string>
+    <string name="insulin_suggestion_warning_low">बहुत कम</string>
+    <string name="insulin_suggestion_warning_high">बहुत ज्यादा</string>
+    <string name="insulin_suggestion_value">सुझाया गया इंसुलिन: %1$.1f</string>
+    <string name="insulin_suggestion_error">अभी सुझाव देने में असमर्थ है</string>
+    <string name="insulin_suggestion_applied">सुझाव लागू किया गया</string>
+
+    <!-- Export database -->
+    <string name="export_ask_ml_title">प्लगइन बनाने के लिए डेटा तैयार करें</string>
+    <string name="export_ask_ml_message">आप इंसुलिन सुझाव प्लगइन बनाने के लिए अपने ग्लूकोज डेटा को निर्यात करने वाले हैं।\n
+ यह डेटा किसी के द्वारा पठनीय हो सकता है, जिसके पास इस उपकरण की आंतरिक मेमोरी तक पहुँच हो।\n
+ क्या आप आगे बढ़ना चाहते हैं?</string>
+    <string name="export_ask_xlsx_title">निर्यात</string>
+    <string name="export_ask_xlsx_summary">PC पर आसानी से अपने डेटा को पढ़ने के लिए एक इलेक्ट्रॉनिक शीट फ़ाइल बनाएं</string>
+    <string name="export_ask_xlsx_message">आप इलेक्ट्रॉनिक शीट फ़ाइल के रूप में ग्लूकोज डेटा निर्यात करने वाले हैं। यह डेटा किसी के द्वारा पठनीय हो सकता है, जिसके पास इस उपकरण की आंतरिक मेमोरी तक पहुँच हो। क्या आप आगे बढ़ना चाहते हैं?</string>
+    <string name="export_ask_positive">निर्यात</string>
+    <string name="export_ask_permission_message">डाटा को इंटरनल मेमोरी में एक्सपोर्ट करने के लिए स्टोरेज एक्सेस की जरूरत होती है। कृपया इसे अनुदान दें।</string>
+    <string name="export_ask_permission_positive">फिर से पुछो</string>
+    <string name="export_ask_auth_title">Diab ∙ निर्यात</string>
+    <string name="export_ask_auth_message">अपने डेटा को निर्यात करने के लिए प्रमाणीकरण</string>
+    <string name="export_failed_auth">प्रामाणिक विफल रहा, डेटा निर्यात रद्द कर दिया गया है</string>
+    <string name="export_notification_title">ग्लूकोज डेटा निर्यात करें</string>
+    <string name="export_notification_channel">निर्यात संचालन</string>
+    <string name="export_completed_success">डेटा को आंतरिक मेमोरी में निर्यात किया गया है</string>
+    <string name="export_completed_failure">आंतरिक मेमोरी में डेटा निर्यात करने में असमर्थ</string>
+
+    <!-- Export sheet -->
+    <string name="export_sheet_glucose_value">मूल्य</string>
+    <string name="export_sheet_glucose_date">दिनांक</string>
+    <string name="export_sheet_glucose_eat">खाना स्तर</string>
+    <string name="export_sheet_glucose_insulin">इंसुलिन</string>
+    <string name="export_sheet_glucose_insulin_value">यूनिट</string>
+    <string name="export_sheet_glucose_basal">Basal</string>
+    <string name="export_sheet_insulin_name">नाम</string>
+    <string name="export_sheet_insulin_time_frame">समय सीमा</string>
+    <string name="export_sheet_insulin_basal">बेसल है?</string>
+    <string name="export_sheet_insulin_half_units">क्या आधी इकाई है?</string>
+
+    <!-- Fitness integration -->
+    <string name="fit_name">फिट एकीकरण</string>
+
+    <!-- Settings -->
+    <string name="settings_name">Settings</string>
+    <string name="settings_glucose_thresholds_category">ग्लूकोज दहलीज</string>
+    <string name="settings_glucose_thresholds_high">ऊँची दहलीज</string>
+    <string name="settings_glucose_thresholds_low">कम दहलीज</string>
+    <string name="settings_plugin_category_title">इंसुलिन सुझाव</string>
+    <string name="settings_plugin_manage_title">सुझाव प्लगइन</string>
+    <string name="settings_plugin_manage_summary_new">प्लगइन स्थापित करें\\2026</string>
+    <string name="settings_plugin_manage_summary_installed">प्लगइन स्थापित किया।\n
+ अंतिम अपडेट: %1$s</string>
+    <string name="settings_plugin_installing">स्थापित कर रहा है\\2026</string>
+    <string name="settings_plugin_remove">प्लगइन अनइंस्टॉल करें</string>
+    <string name="settings_plugin_remove_confirmation">जब तक एक नया प्लगइन स्थापित नहीं किया जाता है तब तक इंसुलिन सुझाव अक्षम होने जा रहे हैं। यह क्रिया पूर्ववत नहीं की जा सकती, क्या आप आगे बढ़ना चाहते हैं?</string>
+    <string name="settings_plugin_remove_confirmation_positive">हटाए</string>
+    <string name="settings_ui_theme_title">Style</string>
+    <string name="settings_ui_theme_system">ऑटो (सिस्टम)</string>
+    <string name="settings_ui_theme_light">Light</string>
+    <string name="settings_ui_theme_dark">Dark</string>
+
+    <!-- Accessibility -->
+    <string name="a11y_overview_menu">विकल्प</string>
+</resources>
