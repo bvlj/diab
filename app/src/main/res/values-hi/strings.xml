@@ -38,9 +38,9 @@
     <string name="time_night">रात</string>
 
     <!-- Overview -->
-    <string name="overview_last_desc">अंतिम मूल्य%1$s</string>
+    <string name="overview_last_desc">अंतिम मान %1$s</string>
     <string name="overview_last_fallback">नमस्ते</string>
-    <string name="overview_last_desc_fallback">नीले बटन को छूकर एक मूल्य जोड़ें</string>
+    <string name="overview_last_desc_fallback">नीले बटन को दबाकर एक मान जोड़ें</string>
 
     <!-- Insulin Editor -->
     <string name="insulin_editor_add">इंसुलिन जोड़े</string>
@@ -68,11 +68,11 @@
     <!-- Export database -->
     <string name="export_ask_ml_title">प्लगइन बनाने के लिए डेटा तैयार करें</string>
     <string name="export_ask_ml_message">आप इंसुलिन सुझाव प्लगइन बनाने के लिए अपने ग्लूकोज डेटा को निर्यात करने वाले हैं।\n
- यह डेटा किसी के द्वारा पठनीय हो सकता है, जिसके पास इस उपकरण की आंतरिक मेमोरी तक पहुँच हो।\n
+ यह डेटा किसी के द्वारा पठनीय हो सकता है, जिसके पास इस फोन की आंतरिक मेमोरी तक पहुँच हो।\n
  क्या आप आगे बढ़ना चाहते हैं?</string>
     <string name="export_ask_xlsx_title">निर्यात</string>
     <string name="export_ask_xlsx_summary">PC पर आसानी से अपने डेटा को पढ़ने के लिए एक इलेक्ट्रॉनिक शीट फ़ाइल बनाएं</string>
-    <string name="export_ask_xlsx_message">आप इलेक्ट्रॉनिक शीट फ़ाइल के रूप में ग्लूकोज डेटा निर्यात करने वाले हैं। यह डेटा किसी के द्वारा पठनीय हो सकता है, जिसके पास इस उपकरण की आंतरिक मेमोरी तक पहुँच हो। क्या आप आगे बढ़ना चाहते हैं?</string>
+    <string name="export_ask_xlsx_message">आप इलेक्ट्रॉनिक शीट फ़ाइल के रूप में ग्लूकोज डेटा निर्यात करने वाले हैं। यह डेटा किसी के द्वारा पठनीय हो सकता है, जिसके पास इस फोन की आंतरिक मेमोरी तक पहुँच हो। क्या आप आगे बढ़ना चाहते हैं?</string>
     <string name="export_ask_positive">निर्यात</string>
     <string name="export_ask_permission_message">डाटा को इंटरनल मेमोरी में एक्सपोर्ट करने के लिए स्टोरेज एक्सेस की जरूरत होती है। कृपया इसे अनुदान दें।</string>
     <string name="export_ask_permission_positive">फिर से पुछो</string>
@@ -85,7 +85,7 @@
     <string name="export_completed_failure">आंतरिक मेमोरी में डेटा निर्यात करने में असमर्थ</string>
 
     <!-- Export sheet -->
-    <string name="export_sheet_glucose_value">मूल्य</string>
+    <string name="export_sheet_glucose_value">मान</string>
     <string name="export_sheet_glucose_date">दिनांक</string>
     <string name="export_sheet_glucose_eat">खाना स्तर</string>
     <string name="export_sheet_glucose_insulin">इंसुलिन</string>
