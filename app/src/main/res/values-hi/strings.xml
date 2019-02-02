@@ -46,7 +46,7 @@
     <string name="insulin_editor_add">इंसुलिन जोड़े</string>
     <string name="insulin_editor_edit">इंसुलिन संपादित करें</string>
     <string name="insulin_editor_name">नाम</string>
-    <string name="insulin_item_basal">Basal</string>
+    <string name="insulin_item_basal">बेसल</string>
     <string name="insulin_item_half_units">आधी इकाई</string>
 
     <!-- Glucose Editor -->
@@ -90,10 +90,10 @@
     <string name="export_sheet_glucose_eat">खाना स्तर</string>
     <string name="export_sheet_glucose_insulin">इंसुलिन</string>
     <string name="export_sheet_glucose_insulin_value">यूनिट</string>
-    <string name="export_sheet_glucose_basal">Basal</string>
+    <string name="export_sheet_glucose_basal">बेसल</string>
     <string name="export_sheet_insulin_name">नाम</string>
     <string name="export_sheet_insulin_time_frame">समय पहर</string>
-    <string name="export_sheet_insulin_basal">Basal?</string>
+    <string name="export_sheet_insulin_basal">बेसल ?</string>
     <string name="export_sheet_insulin_half_units">क्या आधी इकाई है?</string>
 
     <!-- Fitness integration -->
