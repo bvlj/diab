@@ -93,7 +93,7 @@
     <string name="export_sheet_glucose_basal">बेसल</string>
     <string name="export_sheet_insulin_name">नाम</string>
     <string name="export_sheet_insulin_time_frame">समय पहर</string>
-    <string name="export_sheet_insulin_basal">बेसल ?</string>
+    <string name="export_sheet_insulin_basal">बेसल?</string>
     <string name="export_sheet_insulin_half_units">क्या आधी इकाई है?</string>
 
     <!-- Fitness integration -->
@@ -113,10 +113,10 @@
     <string name="settings_plugin_remove">प्लगइन अनइंस्टॉल करें</string>
     <string name="settings_plugin_remove_confirmation">जब तक एक नया प्लगइन स्थापित नहीं किया जाता है तब तक इंसुलिन सुझाव अक्षम होने जा रहे हैं। यह क्रिया पूर्ववत नहीं की जा सकती, क्या आप आगे बढ़ना चाहते हैं?</string>
     <string name="settings_plugin_remove_confirmation_positive">हटाए</string>
-    <string name="settings_ui_theme_title">Style</string>
+    <string name="settings_ui_theme_title">स्टाइल</string>
     <string name="settings_ui_theme_system">ऑटो (सिस्टम)</string>
-    <string name="settings_ui_theme_light">Light</string>
-    <string name="settings_ui_theme_dark">Dark</string>
+    <string name="settings_ui_theme_light">लाइट</string>
+    <string name="settings_ui_theme_dark">डार्क</string>
 
     <!-- Accessibility -->
     <string name="a11y_overview_menu">विकल्प</string>
