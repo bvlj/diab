@@ -19,14 +19,14 @@
 
     <string name="fragment_overview">अवलोकन</string>
     <string name="fragment_glucose">Glucose</string>
-    <string name="fragment_insulin">Insulin</string>
+    <string name="fragment_insulin">इंसुलिन</string>
 
     <!-- Time -->
     <string name="time_today">आज</string>
     <string name="time_yesterday">कल</string>
     <string name="time_last_x">अंतिम %1$</string>
     <string name="time_day_month_short_format">dd MMM</string>
-    <string name="time_pick">एक और तारीख चुनें\\2026</string>
+    <string name="time_pick">एक और तारीख चुनें\u2026</string>
 
     <!-- Time zone -->
     <string name="time_extra">अतिरिक्त</string>
@@ -39,7 +39,7 @@
 
     <!-- Overview -->
     <string name="overview_last_desc">अंतिम मूल्य%1$s</string>
-    <string name="overview_last_fallback">Hello</string>
+    <string name="overview_last_fallback">नमस्ते</string>
     <string name="overview_last_desc_fallback">नीले बटन को छूकर एक मूल्य जोड़ें</string>
 
     <!-- Insulin Editor -->
@@ -62,7 +62,7 @@
     <string name="insulin_suggestion_warning_low">बहुत कम</string>
     <string name="insulin_suggestion_warning_high">बहुत ज्यादा</string>
     <string name="insulin_suggestion_value">सुझाया गया इंसुलिन: %1$.1f</string>
-    <string name="insulin_suggestion_error">अभी सुझाव देने में असमर्थ है</string>
+    <string name="insulin_suggestion_error">अभी सुझाव देने में असमर्थ</string>
     <string name="insulin_suggestion_applied">सुझाव लागू किया गया</string>
 
     <!-- Export database -->
@@ -92,24 +92,24 @@
     <string name="export_sheet_glucose_insulin_value">यूनिट</string>
     <string name="export_sheet_glucose_basal">Basal</string>
     <string name="export_sheet_insulin_name">नाम</string>
-    <string name="export_sheet_insulin_time_frame">समय सीमा</string>
-    <string name="export_sheet_insulin_basal">बेसल है?</string>
+    <string name="export_sheet_insulin_time_frame">समय पहर</string>
+    <string name="export_sheet_insulin_basal">Basal?</string>
     <string name="export_sheet_insulin_half_units">क्या आधी इकाई है?</string>
 
     <!-- Fitness integration -->
     <string name="fit_name">फिट एकीकरण</string>
 
     <!-- Settings -->
-    <string name="settings_name">Settings</string>
-    <string name="settings_glucose_thresholds_category">ग्लूकोज दहलीज</string>
-    <string name="settings_glucose_thresholds_high">ऊँची दहलीज</string>
-    <string name="settings_glucose_thresholds_low">कम दहलीज</string>
+    <string name="settings_name">सेटिंग्स</string>
+    <string name="settings_glucose_thresholds_category">ग्लूकोज स्तर</string>
+    <string name="settings_glucose_thresholds_high">उच्च स्तर</string>
+    <string name="settings_glucose_thresholds_low">कम स्तर</string>
     <string name="settings_plugin_category_title">इंसुलिन सुझाव</string>
     <string name="settings_plugin_manage_title">सुझाव प्लगइन</string>
-    <string name="settings_plugin_manage_summary_new">प्लगइन स्थापित करें\\2026</string>
+    <string name="settings_plugin_manage_summary_new">प्लगइन स्थापित करें\u2026</string>
     <string name="settings_plugin_manage_summary_installed">प्लगइन स्थापित किया।\n
  अंतिम अपडेट: %1$s</string>
-    <string name="settings_plugin_installing">स्थापित कर रहा है\\2026</string>
+    <string name="settings_plugin_installing">स्थापित कर रहा है\u2026</string>
     <string name="settings_plugin_remove">प्लगइन अनइंस्टॉल करें</string>
     <string name="settings_plugin_remove_confirmation">जब तक एक नया प्लगइन स्थापित नहीं किया जाता है तब तक इंसुलिन सुझाव अक्षम होने जा रहे हैं। यह क्रिया पूर्ववत नहीं की जा सकती, क्या आप आगे बढ़ना चाहते हैं?</string>
     <string name="settings_plugin_remove_confirmation_positive">हटाए</string>
