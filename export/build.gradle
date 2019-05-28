@@ -29,5 +29,5 @@ dependencies {
     implementation project(':data')
     implementation project(':ui')
 
-    implementation "org.dhatim:fastexcel:0.10.5"
+    implementation "org.dhatim:fastexcel:0.10.7"
 }
