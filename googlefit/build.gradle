@@ -29,6 +29,6 @@ dependencies {
     implementation project(':data')
     implementation project(':ui')
 
-    implementation "com.google.android.gms:play-services-auth:16.0.1"
+    implementation "com.google.android.gms:play-services-auth:17.0.0"
     implementation "com.google.android.gms:play-services-fitness:16.0.1"
 }
