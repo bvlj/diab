@@ -36,7 +36,7 @@ dependencies {
 
     // Architecture
     api "androidx.lifecycle:lifecycle-extensions:2.1.0-beta01"
-    api "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0-beta01"
+    api "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0-alpha02"
     kapt "androidx.lifecycle:lifecycle-compiler:2.1.0-beta01"
 }
 
