@@ -83,25 +83,25 @@ class GoogleFitHandler : BaseFitHandler() {
             .setDataType(HealthDataTypes.TYPE_BLOOD_GLUCOSE)
             .build()
 
-        val point = DataPoint.create(source).apply {
-            setTimestamp(timeStamp, TimeUnit.MILLISECONDS)
-
-            getValue(HealthFields.FIELD_BLOOD_GLUCOSE_LEVEL).setFloat(glucose.value / 18f)
-
-            getValue(HealthFields.FIELD_BLOOD_GLUCOSE_SPECIMEN_SOURCE).setInt(
+        val point = DataPoint.builder(source)
+            .setTimestamp(timeStamp, TimeUnit.MILLISECONDS)
+            .setField(HealthFields.FIELD_BLOOD_GLUCOSE_LEVEL, glucose.value / 18f)
+            .setField(
+                HealthFields.FIELD_BLOOD_GLUCOSE_SPECIMEN_SOURCE,
                 HealthFields.BLOOD_GLUCOSE_SPECIMEN_SOURCE_CAPILLARY_BLOOD
             )
-
-            getValue(HealthFields.FIELD_TEMPORAL_RELATION_TO_MEAL).setInt(
+            .setField(
+                HealthFields.FIELD_TEMPORAL_RELATION_TO_MEAL,
                 glucose.timeFrame.toFitMealRelation()
             )
-
-            getValue(HealthFields.FIELD_TEMPORAL_RELATION_TO_SLEEP).setInt(
+            .setField(
+                HealthFields.FIELD_TEMPORAL_RELATION_TO_SLEEP,
                 glucose.timeFrame.toFitSleepRelation()
             )
-        }
+            .build()
 
-        return DataSet.create(source).apply { add(point) }
+        return DataSet.builder(source).add(point)
+            .build()
     }
 
     companion object {

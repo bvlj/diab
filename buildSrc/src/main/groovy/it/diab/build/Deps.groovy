@@ -55,7 +55,7 @@ class Deps {
     class Google {
         public static final String auth = "com.google.android.gms:play-services-auth:17.0.0"
 
-        public static final String fitness = "com.google.android.gms:play-services-fitness:17.0.0"
+        public static final String fitness = "com.google.android.gms:play-services-fitness:18.0.0"
 
         public static final String materialDesign = "com.google.android.material:material:1.1.0-beta01"
     }
