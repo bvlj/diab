@@ -23,7 +23,7 @@ class Deps {
         public static final String workManager = "androidx.work:work-runtime-ktx:2.2.0"
 
         class Lifecycle {
-            private static final String VERSION = "2.2.0-rc01"
+            private static final String VERSION = "2.2.0-rc02"
 
             public static final String compiler = "androidx.lifecycle:lifecycle-compiler:$VERSION"
             public static final String extensions = "androidx.lifecycle:lifecycle-extensions:$VERSION"
