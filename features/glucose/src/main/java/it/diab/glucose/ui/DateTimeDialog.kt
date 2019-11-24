@@ -15,7 +15,7 @@ import android.content.DialogInterface
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import it.diab.core.time.DateTime
-import it.diab.core.time.Days
+import it.diab.core.time.days
 import it.diab.glucose.R
 
 internal class DateTimeDialog(
@@ -47,7 +47,10 @@ internal class DateTimeDialog(
             }
             1 -> {
                 dialog?.dismiss()
-                dateTime -= Days(1)
+                dateTime = dateTime.with(
+                    DateTime.DAY_OF_YEAR,
+                    DateTime.now[DateTime.DAY_OF_YEAR]
+                ) - 1L.days()
                 showTimePicker()
             }
             2 -> {

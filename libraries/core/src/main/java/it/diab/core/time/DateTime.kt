@@ -27,11 +27,11 @@ class DateTime {
         calendar[Calendar.DAY_OF_MONTH] = day
     }
 
-    operator fun plus(timeUnit: TimeUnit): DateTime =
-        DateTime(epochMillis + timeUnit.getValue())
+    operator fun plus(time: ChronoUnit): DateTime =
+        DateTime(epochMillis + time.toMillis())
 
-    operator fun minus(timeUnit: TimeUnit): DateTime =
-        DateTime(epochMillis - timeUnit.getValue())
+    operator fun minus(time: ChronoUnit): DateTime =
+        DateTime(epochMillis - time.toMillis())
 
     operator fun minus(other: DateTime): Long =
         epochMillis - other.epochMillis

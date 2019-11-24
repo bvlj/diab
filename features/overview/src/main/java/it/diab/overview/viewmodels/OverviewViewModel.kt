@@ -16,7 +16,7 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.LivePagedListBuilder
 import com.github.mikephil.charting.data.Entry
 import it.diab.core.time.DateTime
-import it.diab.core.time.Days
+import it.diab.core.time.days
 import it.diab.core.util.event.Event
 import it.diab.data.entities.Glucose
 import it.diab.data.entities.TimeFrame
@@ -48,7 +48,7 @@ internal class OverviewViewModel internal constructor(
 
     private suspend fun runUpdateHeaderData(): HeaderStatus = withContext(Default) {
         val end = DateTime.now
-        val start = end - Days(7)
+        val start = end - 7L.days()
         val data = glucoseRepository.getInDateRange(start, end)
 
         val todayDeferred = async { updateToday(data) }

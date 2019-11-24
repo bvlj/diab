@@ -10,7 +10,7 @@ package it.diab.export.writer
 
 import android.os.ParcelFileDescriptor
 import it.diab.core.time.DateTime
-import it.diab.core.time.Days
+import it.diab.core.time.days
 import it.diab.data.entities.Glucose
 import it.diab.data.entities.TimeFrame
 import it.diab.data.repositories.GlucoseRepository
@@ -28,7 +28,7 @@ internal class MlWriter(
 
     suspend fun export(): Boolean {
         val dateEnd = DateTime.now
-        val dateStart = dateEnd - Days(DAYS_TO_EXPORT)
+        val dateStart = dateEnd - DAYS_TO_EXPORT.days()
         val end = dateEnd.epochMillis
         val start = dateStart.epochMillis
 
