@@ -10,7 +10,7 @@ package it.diab.data.repositories
 
 import androidx.test.platform.app.InstrumentationRegistry
 import it.diab.core.time.DateTime
-import it.diab.core.time.Days
+import it.diab.core.time.hours
 import it.diab.data.AppDatabase
 import it.diab.data.extensions.glucose
 import kotlinx.coroutines.runBlocking
@@ -37,7 +37,7 @@ class GlucoseRepositoryTest {
         val baseValue = 42
 
         val end = DateTime.now
-        val start = end - Days(daysRange.toLong())
+        val start = end - (daysRange * 24L).hours()
 
         // Clear old test data
         repository.getInDateRange(start, end).forEach {
@@ -47,7 +47,7 @@ class GlucoseRepositoryTest {
         val data = Array(7) {
             glucose {
                 value = baseValue * (it + 1)
-                date = end - Days(it.toLong())
+                date = end - (it * 24L).hours()
             }
         }
 

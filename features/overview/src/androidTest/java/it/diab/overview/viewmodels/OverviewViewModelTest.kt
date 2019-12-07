@@ -15,7 +15,7 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LifecycleRegistry
 import androidx.test.core.app.ApplicationProvider
 import it.diab.core.time.DateTime
-import it.diab.core.time.Days
+import it.diab.core.time.hours
 import it.diab.core.util.event.EventObserver
 import it.diab.data.entities.Glucose
 import it.diab.data.entities.TimeFrame
@@ -45,7 +45,7 @@ class OverviewViewModelTest {
         glucose {
             value = glucoseValues[i]
             timeFrame = testTimeFrame
-            date = DateTime.now - Days(i.toLong())
+            date = DateTime.now - (i * 24L).hours()
         }
     }
     private lateinit var glucoseRepository: GlucoseRepository

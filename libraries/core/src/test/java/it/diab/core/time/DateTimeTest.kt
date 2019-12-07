@@ -17,8 +17,8 @@ class DateTimeTest {
     @Test
     fun plus() {
         var date = DateTime(0L)
-        date += Seconds(6L)
-        date += Minutes(1L)
+        date += 6L.seconds()
+        date += 1L.minutes()
 
         Assert.assertEquals(66000L, date.epochMillis)
     }
@@ -26,8 +26,8 @@ class DateTimeTest {
     @Test
     fun minus() {
         var date = DateTime(66000L)
-        date -= Seconds(6)
-        date -= Minutes(1)
+        date -= 6L.seconds()
+        date -= 1L.minutes()
 
         Assert.assertEquals(0L, date.epochMillis)
     }
@@ -53,8 +53,8 @@ class DateTimeTest {
     @Test
     fun compareTo() {
         val date = DateTime.now
-        val after = date + Hours(1)
-        val before = date - Hours(2)
+        val after = date + 1L.hours()
+        val before = date - 2L.hours()
 
         Assert.assertTrue(date > before)
         Assert.assertTrue(date < after)
@@ -88,8 +88,8 @@ class DateTimeTest {
     @Test
     fun isToday() {
         val today = DateTime.now
-        val tomorrow = today + Days(1)
-        val yesterday = today - Days(1)
+        val tomorrow = today + 24L.hours()
+        val yesterday = today - 24L.hours()
         Assert.assertTrue(today.isToday())
         Assert.assertFalse(tomorrow.isToday())
         Assert.assertFalse(yesterday.isToday())
