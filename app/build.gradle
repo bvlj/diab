@@ -1,0 +1,75 @@
+apply plugin: "com.android.application"
+apply plugin: "kotlin-android"
+
+/*
+ * Copyright (c) 2020 Bevilacqua Joey
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+import xyz.diab.build.Config
+import xyz.diab.build.Deps.Features
+import xyz.diab.build.Deps.Libraries
+import xyz.diab.build.Deps.Square
+
+android {
+    compileSdkVersion Config.compileSdk
+
+    defaultConfig {
+        applicationId Config.packageName
+
+        minSdkVersion Config.minSdk
+        targetSdkVersion Config.targetSdk
+
+        versionCode Config.versionCode
+        versionName Config.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+        }
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility Config.javaVersion
+        targetCompatibility Config.javaVersion
+    }
+
+    kotlinOptions {
+        jvmTarget = Config.javaVersion
+    }
+
+    packagingOptions {
+        exclude 'META-INF/kotlinx-coroutines-core.kotlin_module'
+        exclude 'META-INF/main.kotlin_module'
+    }
+}
+
+dependencies {
+    implementation project(Libraries.roboto)
+    implementation project(Libraries.ui)
+
+    implementation project(Features.editor)
+    implementation project(Features.insulin)
+    implementation project(Features.overview)
+
+    implementation Square.LeakCanary.android
+}
+
+apply from: "../ktlint.gradle"

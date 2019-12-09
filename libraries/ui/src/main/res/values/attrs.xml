@@ -1,0 +1,55 @@
+<!--
+  Copyright (c) 2020 Bevilacqua Joey
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources>
+
+    <!-- Date field -->
+    <declare-styleable name="DateTimeFieldView">
+        <attr name="textFormat" format="string" />
+    </declare-styleable>
+
+    <!-- SparkView -->
+    <attr name="spark_SparkViewStyle" format="reference" />
+
+    <declare-styleable name="SparkView">
+        <attr name="spark_animateChanges" format="boolean|reference" />
+        <attr name="spark_baseLineColor" format="color|reference" />
+        <attr name="spark_baseLineWidth" format="dimension|reference" />
+        <attr name="spark_cornerRadius" format="dimension|reference" />
+        <attr name="spark_fillColor" format="color|reference" />
+        <attr name="spark_fillType" format="enum">
+            <!-- must match values in SparkView.FillType -->
+            <enum name="none" value="0" />
+            <enum name="up" value="1" />
+            <enum name="down" value="2" />
+            <enum name="towardZero" value="3" />
+        </attr>
+        <attr name="spark_lineColor" format="color|reference" />
+        <attr name="spark_lineWidth" format="dimension|reference" />
+        <attr name="spark_scrubLineColor" format="color|reference" />
+        <attr name="spark_scrubLineWidth" format="dimension|reference" />
+        <attr name="spark_scrubEnabled" format="boolean|reference" />
+    </declare-styleable>
+
+    <!-- Time header decorator -->
+    <declare-styleable name="TimeHeader">
+        <attr name="android:width" />
+        <attr name="android:padding" />
+        <attr name="android:textColor" />
+        <attr name="dayTextSize" format="dimension" />
+        <attr name="monthTextSize" format="dimension" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,75 @@
+apply plugin: "com.android.library"
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-kapt"
+
+/*
+ * Copyright (c) 2020 Bevilacqua Joey
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+import xyz.diab.build.Config
+import xyz.diab.build.Deps.AndroidX
+import xyz.diab.build.Deps.Kotlin
+import xyz.diab.build.Deps.Libraries
+
+android {
+    compileSdkVersion Config.compileSdk
+
+    defaultConfig {
+        minSdkVersion Config.minSdk
+        targetSdkVersion Config.targetSdk
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = Config.javaVersion
+    }
+
+    kapt.arguments {
+        arg("room.schemaLocation", "$projectDir/schemas".toString())
+        arg("room.incremental", "true")
+    }
+}
+
+dependencies {
+    api project(Libraries.core)
+
+    api AndroidX.ktx
+
+    api AndroidX.Lifecycle.viewModel
+    api AndroidX.Lifecycle.extensions
+    api AndroidX.Lifecycle.liveData
+    api AndroidX.Lifecycle.runtime
+    kapt AndroidX.Lifecycle.compiler
+
+    implementation AndroidX.Room.ktx
+    implementation AndroidX.Room.runtime
+    kapt AndroidX.Room.compiler
+
+    api Kotlin.Coroutines.android
+}
+
+
+// Experimental coroutines APIs
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+    kotlinOptions {
+        freeCompilerArgs += "-Xuse-experimental=kotlin.Experimental"
+    }
+}

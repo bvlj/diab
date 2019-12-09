@@ -1,0 +1,108 @@
+<!--
+  Copyright (c) 2020 Bevilacqua Joey
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources>
+
+    <!-- Widget styles -->
+    <eat-comment />
+
+    <style name="AppTheme.SparkView">
+        <item name="spark_lineColor">@color/spark_line_color</item>
+        <item name="spark_lineWidth">@dimen/spark_line_width</item>
+        <item name="spark_cornerRadius">@dimen/spark_corner_radius</item>
+        <item name="spark_fillColor">@color/spark_fill_color</item>
+        <item name="spark_baseLineColor">@color/spark_base_line_color</item>
+        <item name="spark_baseLineWidth">@dimen/spark_base_line_width</item>
+        <item name="spark_scrubLineColor">@color/spark_scrub_line_color</item>
+        <item name="spark_scrubLineWidth">@dimen/spark_scrub_line_width</item>
+        <item name="spark_scrubEnabled">false</item>
+        <item name="spark_animateChanges">true</item>
+    </style>
+
+    <!-- Bottom Sheet -->
+    <style name="AppTheme.BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppTheme.ModalStyle</item>
+    </style>
+
+    <style name="AppTheme.ModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_bottom_sheet</item>
+    </style>
+
+    <!-- FAB -->
+    <style name="AppTheme.FAB" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="tint">?colorOnPrimarySurface</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="backgroundTint">@color/fab_tint</item>
+    </style>
+
+    <!-- Dialogs -->
+    <eat-comment />
+
+    <style name="AppTheme.DatePickerDialog" parent="ThemeOverlay.MaterialComponents.Dialog">
+    </style>
+
+    <!-- Text fields -->
+    <eat-comment />
+
+    <style name="AppTheme.Field" />
+
+    <style name="AppTheme.Field.Value">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:layout_marginStart">56dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="AppTheme.Field.Value.Spinner">
+        <item name="android:layout_marginStart">48dp</item>
+    </style>
+
+
+    <style name="AppTheme.Field.Icon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingTop">16dp</item>
+    </style>
+
+    <style name="AppTheme.Field.Unit">
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="AppTheme.Field.Action">
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingTop">16dp</item>
+    </style>
+
+    <!-- Time header -->
+    <eat-comment />
+
+    <style name="AppTheme.TimeHeaders">
+        <item name="android:width">@dimen/time_header_keyline</item>
+        <item name="android:padding">@dimen/time_header_padding</item>
+        <item name="android:textColor">?colorPrimaryDark</item>
+        <item name="dayTextSize">@dimen/time_header_day_text_size</item>
+        <item name="monthTextSize">@dimen/time_header_month_text_size</item>
+    </style>
+</resources>

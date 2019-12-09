@@ -1,0 +1,87 @@
+<!--
+  Copyright (c) 2020 Bevilacqua Joey
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless requipurple by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources>
+
+    <!-- Palette -->
+    <color name="grey_900">#1c1c1c</color>
+    <color name="grey_800">#3c3c3c</color>
+    <color name="grey_700">#5b5b5b</color>
+    <color name="grey_600">#6e6e6e</color>
+    <color name="grey_500">#979797</color>
+    <color name="grey_400">#b7b7b7</color>
+    <color name="grey_300">#dadada</color>
+    <color name="grey_200">#eaeaea</color>
+    <color name="grey_100">#f3f3f3</color>
+    <color name="grey_050">#f9f9f9</color>
+
+    <color name="green_050">#dff8c2</color>
+    <color name="green_100">#bce6cd</color>
+    <color name="green_200">#90d6ad</color>
+    <color name="green_300">#5ec78c</color>
+    <color name="green_400">#2dbb74</color>
+    <color name="green_500">#00af5c</color>
+    <color name="green_600">#00a052</color>
+    <color name="green_700">#008e45</color>
+    <color name="green_800">#007c3a</color>
+    <color name="green_900">#005d25</color>
+
+    <color name="blue_900">#1d40ad</color>
+    <color name="blue_800">#1e5fcd</color>
+    <color name="blue_700">#1d71df</color>
+    <color name="blue_600">#1b83f3</color>
+    <color name="blue_500">#1392ff</color>
+    <color name="blue_400">#39a2ff</color>
+    <color name="blue_300">#5eb2ff</color>
+    <color name="blue_200">#8ec8ff</color>
+    <color name="blue_100">#baddff</color>
+    <color name="blue_050">#e3f2ff</color>
+
+    <color name="orange_900">#bd421a</color>
+    <color name="orange_800">#d64e22</color>
+    <color name="orange_700">#e45525</color>
+    <color name="orange_600">#f25c2a</color>
+    <color name="orange_500">#fd622e</color>
+    <color name="orange_400">#fd784c</color>
+    <color name="orange_300">#fd906c</color>
+    <color name="orange_200">#fdaf96</color>
+    <color name="orange_100">#fecebf</color>
+    <color name="orange_050">#faeae8</color>
+
+    <color name="purple_900">#302661</color>
+    <color name="purple_800">#3E3385</color>
+    <color name="purple_700">#4C41A8</color>
+    <color name="purple_600">#5850C7</color>
+    <color name="purple_500">#7673F4</color>
+    <color name="purple_400">#8F8FFC</color>
+    <color name="purple_300">#8F8FFC</color>
+    <color name="purple_200">#AEB1FF</color>
+    <color name="purple_100">#D0D3FF</color>
+    <color name="purple_050">#F2F3FF</color>
+
+    <!-- UI -->
+
+    <color name="fab_tint">@color/blue_400</color>
+    <color name="list_delete_bg">@color/orange_100</color>
+    <color name="list_delete_fg">@color/orange_900</color>
+    <color name="bottom_sheet_surface">@color/grey_100</color>
+
+    <color name="navBar_bg">@color/grey_100</color>
+
+    <color name="spark_line_color">#000000</color>
+    <color name="spark_fill_color">#a0000000</color>
+    <color name="spark_base_line_color">#757577</color>
+    <color name="spark_scrub_line_color">#757577</color>
+</resources>

@@ -1,0 +1,174 @@
+<!--
+  Copyright (c) 2020 Bevilacqua Joey
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="?attr/colorPrimarySurface">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="?attr/colorPrimarySurface"
+            app:expandedTitleGravity="bottom"
+            app:layout_scrollFlags="exitUntilCollapsed|scroll">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                app:titleTextColor="@color/grey_800"
+                app:layout_collapseMode="pin" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="56dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Value -->
+
+            <ImageView
+                style="@style/AppTheme.Field.Icon"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_data"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/valueField"
+                style="@style/AppTheme.Field.Value"
+                android:background="@null"
+                android:hint="@string/editor_field_value"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toStartOf="@id/unitView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="124" />
+
+            <TextView
+                android:id="@+id/unitView"
+                style="@style/AppTheme.Field.Unit"
+                android:text="@string/editor_field_value_unit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Date -->
+
+            <ImageView
+                style="@style/AppTheme.Field.Icon"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_clock"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/dateField" />
+
+            <xyz.diab.ui.widget.field.DateTimeFieldView
+                android:id="@+id/dateField"
+                style="@style/AppTheme.Field.Value"
+                android:gravity="center_vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/valueField"
+                tools:text="Mon, Feb 17 2020 10:32" />
+
+            <!-- Before / After meal -->
+
+            <ImageView
+                style="@style/AppTheme.Field.Icon"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_eat"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/mealField" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/mealField"
+                style="@style/AppTheme.Field.Value.Spinner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dateField" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/grey_300"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mealField" />
+
+            <xyz.diab.ui.widget.field.SimpleActionableFieldView
+                android:id="@+id/bolusField"
+                style="@style/AppTheme.Field.Value"
+                android:gravity="center_vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider"
+                tools:text="12 Bolus ABC" />
+
+            <ImageView
+                android:id="@+id/bolusIcon"
+                style="@style/AppTheme.Field.Action"
+                android:contentDescription="@string/editor_field_bolus_add"
+                android:src="@drawable/ic_add"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/bolusField"
+                tools:visibility="gone" />
+
+            <xyz.diab.ui.widget.field.SimpleActionableFieldView
+                android:id="@+id/basalField"
+                style="@style/AppTheme.Field.Value"
+                android:gravity="center_vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bolusField"
+                tools:text="@string/editor_field_basal_add" />
+
+            <ImageView
+                android:id="@+id/basalIcon"
+                style="@style/AppTheme.Field.Action"
+                android:contentDescription="@string/editor_field_basal_add"
+                android:src="@drawable/ic_add"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/basalField" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:text="@string/action_save" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

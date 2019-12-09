@@ -1,0 +1,186 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "45bfa805bf1dc099450e961e760adb9a",
+    "entities": [
+      {
+        "tableName": "glucoses",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `value` REAL NOT NULL, `timeStamp` INTEGER NOT NULL, `beforeMeal` INTEGER NOT NULL, `eatLevel` INTEGER NOT NULL, `bolus_name` TEXT, `bolus_value` REAL, `basal_name` TEXT, `basal_value` REAL, FOREIGN KEY(`bolus_name`) REFERENCES `insulins`(`name`) ON UPDATE CASCADE ON DELETE SET DEFAULT , FOREIGN KEY(`basal_name`) REFERENCES `insulins`(`name`) ON UPDATE CASCADE ON DELETE SET DEFAULT )",
+        "fields": [
+          {
+            "fieldPath": "_id",
+            "columnName": "_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "value",
+            "columnName": "value",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timeStamp",
+            "columnName": "timeStamp",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "beforeMeal",
+            "columnName": "beforeMeal",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "eatLevel",
+            "columnName": "eatLevel",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bolus.name",
+            "columnName": "bolus_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "bolus.value",
+            "columnName": "bolus_value",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "basalBolus.name",
+            "columnName": "basal_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "basalBolus.value",
+            "columnName": "basal_value",
+            "affinity": "REAL",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "bolusIndex",
+            "unique": false,
+            "columnNames": [
+              "bolus_name"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `bolusIndex` ON `${TABLE_NAME}` (`bolus_name`)"
+          },
+          {
+            "name": "basalIndex",
+            "unique": false,
+            "columnNames": [
+              "basal_name"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `basalIndex` ON `${TABLE_NAME}` (`basal_name`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "insulins",
+            "onDelete": "SET DEFAULT",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "bolus_name"
+            ],
+            "referencedColumns": [
+              "name"
+            ]
+          },
+          {
+            "table": "insulins",
+            "onDelete": "SET DEFAULT",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "basal_name"
+            ],
+            "referencedColumns": [
+              "name"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "hba1c",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `value` REAL NOT NULL, `timeStamp` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "_id",
+            "columnName": "_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "value",
+            "columnName": "value",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timeStamp",
+            "columnName": "timeStamp",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "insulins",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`name` TEXT NOT NULL, `basal` INTEGER NOT NULL, `halfUnits` INTEGER NOT NULL, PRIMARY KEY(`name`))",
+        "fields": [
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "basal",
+            "columnName": "basal",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "halfUnits",
+            "columnName": "halfUnits",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "name"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '45bfa805bf1dc099450e961e760adb9a')"
+    ]
+  }
+}
