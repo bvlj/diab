@@ -1,0 +1,31 @@
+<!--
+  Copyright (c) 2018 Bevilacqua Joey
+
+  Licensed under the GNU GPLv3 license
+
+  The text of the license can be found in the LICENSE file
+  or at https://www.gnu.org/licenses/gpl.txt
+  -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/insulin_suggestion_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="24dp"
+    android:layout_marginEnd="24dp"
+    android:layout_marginBottom="32dp"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/bg_insulin_suggestion"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center_vertical"
+    android:paddingStart="16dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="8dp"
+    android:stateListAnimator="@animator/lift_on_touch"
+    android:drawablePadding="8dp"
+    android:textColor="@color/component_suggestion_fg"
+    android:textSize="16sp"
+    tools:drawableStart="@drawable/ic_suggestion_ml"
+    tools:text="Suggested insulin: 4.5" />

@@ -1,0 +1,23 @@
+<!--
+  Copyright (c) 2019 Bevilacqua Joey
+
+  Licensed under the GNU GPLv3 license
+
+  The text of the license can be found in the LICENSE file
+  or at https://www.gnu.org/licenses/gpl.txt
+  -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="?attr/diab_itemBackground" />
+            <padding
+                android:bottom="8dp"
+                android:left="8dp"
+                android:right="8dp"
+                android:top="8dp" />
+        </shape>
+    </item>
+    <item>
+        <inset android:drawable="@drawable/ic_pref_export_fg" />
+    </item>
+</layer-list>

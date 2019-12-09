@@ -1,0 +1,33 @@
+<!--
+  Copyright (c) 2019 Bevilacqua Joey
+
+  Licensed under the GNU GPLv3 license
+
+  The text of the license can be found in the LICENSE file
+  or at https://www.gnu.org/licenses/gpl.txt
+  -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="it.diab.glucose">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE"
+        tools:node="remove" />
+
+    <application
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".ui.GlucoseActivity"
+            android:configChanges="screenSize|orientation"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

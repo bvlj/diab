@@ -1,0 +1,17 @@
+<!--
+  Copyright (c) 2019 Bevilacqua Joey
+
+  Licensed under the GNU GPLv3 license
+
+  The text of the license can be found in the LICENSE file
+  or at https://www.gnu.org/licenses/gpl.txt
+  -->
+<resources>
+    <!-- Overview -->
+    <string name="overview_last_desc">Ultimo valore</string>
+    <string name="overview_last_fallback">Ciao</string>
+    <string name="overview_last_desc_fallback">Aggiungi un valore toccando il pulsante blu</string>
+
+    <string name="overview_graph_loading">Caricamento\u2026</string>
+    <string name="overview_graph_empty">Non ci sono glicemie recenti</string>
+</resources>

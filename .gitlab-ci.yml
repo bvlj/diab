@@ -1,8 +1,8 @@
 image: openjdk:8-jdk
 
 variables:
-  ANDROID_COMPILE_SDK: "28"
-  ANDROID_BUILD_TOOLS: "28.0.3"
+  ANDROID_COMPILE_SDK: "29"
+  ANDROID_BUILD_TOOLS: "29.0.1"
   # https://developer.android.com/studio/ -> Command line tools only
   ANDROID_SDK_TOOLS: "4333796"
 
@@ -32,27 +32,12 @@ before_script:
   - yes | android-sdk-linux/tools/bin/sdkmanager --licenses
   - set -o pipefail
 
-stages:
-  - build
-  - test
-
-assemble:
-  stage: build
-  script:
-    - ./gradlew assembleOssDebug
-
-checks:
-  stage: test
-  script:
-  - ./gradlew check -PisCiBuild
-
 weekly:
   only:
   - schedules
   script:
-  - echo $KEYSTORE_FILE | base64 -d > gitlab.keystore
-  - ./gradlew assembleOssRelease -Pandroid.injected.signing.store.file="$(pwd)/gitlab.keystore" -Pandroid.injected.signing.store.password=$KEY_PASSWORD -Pandroid.injected.signing.key.alias=$KEY_ALIAS -Pandroid.injected.signing.key.password=$KEYSTORE_PASSWORD
+  - ./gradlew check :app:assembleOssDebug -PisCiBuild
   artifacts:
     paths:
-    - app/build/outputs/apk/oss/release/app-oss-release.apk
+    - app/build/outputs/apk/oss/debug/app-oss-debug.apk
     expire_in: 30 days

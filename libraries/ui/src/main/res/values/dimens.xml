@@ -1,0 +1,21 @@
+<!--
+  Copyright (c) 2019 Bevilacqua Joey
+
+  Licensed under the GNU GPLv3 license
+
+  The text of the license can be found in the LICENSE file
+  or at https://www.gnu.org/licenses/gpl.txt
+  -->
+<resources>
+    <dimen name="app_radius">8dp</dimen>
+
+    <dimen name="time_header_keyline">64dp</dimen>
+    <dimen name="time_header_padding">8dp</dimen>
+    <!-- Use dp because the time decoration has constrained width and we don't
+         want it to grow if the user sets large text scale in the system settings.
+    -->
+    <dimen name="time_header_day_text_size">28dp</dimen>
+    <dimen name="time_header_month_text_size">12dp</dimen>
+
+    <dimen name="fab_margin_base">24dp</dimen>
+</resources>

@@ -1,0 +1,36 @@
+<!--
+  Copyright (c) 2019 Bevilacqua Joey
+
+  Licensed under the GNU GPLv3 license
+
+  The text of the license can be found in the LICENSE file
+  or at https://www.gnu.org/licenses/gpl.txt
+  -->
+<androidx.preference.PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.preference.Preference
+        app:icon="@drawable/ic_pref_plugin"
+        app:key="pref_plugin_manager"
+        app:persistent="false"
+        app:title="@string/settings_insulin_plugin_manage_title" />
+
+    <androidx.preference.Preference
+        app:key="pref_plugin_remover"
+        app:persistent="false"
+        app:title="@string/settings_insulin_plugin_remove" />
+
+    <it.diab.settings.widgets.ExportPreference
+        app:dialogMessage="@string/export_ask_ml_message"
+        app:dialogTitle="@string/export_ask_ml_title"
+        app:key="pref_plugin_export"
+        app:persistent="false"
+        app:title="@string/export_ask_ml_title" />
+
+    <androidx.preference.PreferenceCategory app:key="category_plugin_info">
+
+        <androidx.preference.Preference
+            app:icon="@drawable/ic_info"
+            app:persistent="false"
+            app:summary="@string/settings_insulin_plugin_info" />
+    </androidx.preference.PreferenceCategory>
+</androidx.preference.PreferenceScreen>

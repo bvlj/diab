@@ -1,0 +1,39 @@
+<!--
+  Copyright (c) 2019 Bevilacqua Joey
+
+  Licensed under the GNU GPLv3 license
+
+  The text of the license can be found in the LICENSE file
+  or at https://www.gnu.org/licenses/gpl.txt
+  -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="it.diab.export">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <permission
+        android:name="it.diab.export.ALLOW_EXPORT"
+        android:protectionLevel="dangerous" />
+
+    <application
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <service
+            android:name=".ExportService"
+            android:enabled="true"
+            android:permission="it.diab.export.ALLOW_EXPORT">
+        </service>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="it.diab.files"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+</manifest>

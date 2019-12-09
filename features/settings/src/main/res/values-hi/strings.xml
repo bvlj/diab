@@ -1,0 +1,38 @@
+<!--
+  Copyright (c) 2019 Bevilacqua Joey
+
+  Licensed under the GNU GPLv3 license
+
+  The text of the license can be found in the LICENSE file
+  or at https://www.gnu.org/licenses/gpl.txt
+  -->
+<resources>
+
+    <!-- Style -->
+    <string name="settings_ui_theme_title">स्टाइल</string>
+    <string name="settings_ui_theme_system">ऑटो (सिस्टम)</string>
+    <string name="settings_ui_theme_light">लाइट</string>
+    <string name="settings_ui_theme_dark">डार्क</string>
+
+    <!-- Thresholds -->
+    <string name="settings_category_glucose_thresholds">ग्लूकोज स्तर</string>
+    <string name="settings_glucose_thresholds_high">उच्च स्तर</string>
+    <string name="settings_glucose_thresholds_low">कम स्तर</string>
+
+    <!-- Fit -->
+    <string name="settings_fit_title">Fit integration</string>
+
+    <!-- Insulin -->
+    <string name="settings_category_insulin">इंसुलिन</string>
+    <string name="settings_insulin_manage_title">Manage</string>
+    <string name="settings_insulin_manage_summary">Add, edit and remove your insulins</string>
+    <string name="settings_insulin_plugin_title">इंसुलिन सुझाव</string>
+    <string name="settings_insulin_plugin_info">The suggestion plugin can be used to provide smart dosage hints basing on your previous dosages.\nDisclaimer: <b>do not</b> blindly rely on the hints as they are in no way a replacement of medical advice or suggestions from more experienced humans.</string>
+    <string name="settings_insulin_plugin_manage_title">सुझाव प्लगइन</string>
+    <string name="settings_insulin_plugin_manage_summary_new">प्लगइन स्थापित करें\u2026</string>
+    <string name="settings_insulin_plugin_manage_summary_installed">प्लगइन स्थापित किया।\nअंतिम अपडेट: %1$s</string>
+    <string name="settings_insulin_plugin_installing">स्थापित कर रहा है\u2026</string>
+    <string name="settings_insulin_plugin_remove">प्लगइन अनइंस्टॉल करें</string>
+    <string name="settings_insulin_plugin_remove_confirmation">जब तक एक नया प्लगइन स्थापित नहीं किया जाता है तब तक इंसुलिन सुझाव अक्षम होने जा रहे हैं। यह क्रिया पूर्ववत नहीं की जा सकती, क्या आप आगे बढ़ना चाहते हैं?</string>
+    <string name="settings_insulin_plugin_remove_confirmation_positive">हटाए</string>
+</resources>

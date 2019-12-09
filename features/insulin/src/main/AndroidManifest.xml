@@ -1,0 +1,26 @@
+<!--
+  Copyright (c) 2019 Bevilacqua Joey
+
+  Licensed under the GNU GPLv3 license
+
+  The text of the license can be found in the LICENSE file
+  or at https://www.gnu.org/licenses/gpl.txt
+  -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="it.diab.insulin">
+
+    <application
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".ui.InsulinActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/insulin_list_title"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

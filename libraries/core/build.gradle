@@ -1,0 +1,49 @@
+/*
+ * Copyright (c) 2019 Bevilacqua Joey
+ *
+ * Licensed under the GNU GPLv3 license
+ *
+ * The text of the license can be found in the LICENSE file
+ * or at https://www.gnu.org/licenses/gpl.txt
+ */
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+import it.diab.build.Config
+import it.diab.build.Deps.Kotlin
+import it.diab.build.Deps.AndroidX
+
+android {
+    compileSdkVersion Config.compileSdk
+
+    defaultConfig {
+        minSdkVersion Config.minSdk
+        targetSdkVersion Config.targetSdk
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    api Kotlin.stdLib
+    api Kotlin.coroutinesCore
+    api Kotlin.coroutinesAndroid
+
+    // Architecture
+    api AndroidX.Lifecycle.extensions
+    api AndroidX.Lifecycle.viewModel
+    kapt AndroidX.Lifecycle.compiler
+
+    // PreferenceManager deprecated in API 29+
+    api AndroidX.preference
+}
+
+// Testing dependencies
+apply from: "../../deps_test.gradle"

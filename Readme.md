@@ -56,7 +56,7 @@ Setup the work environment
 * Prevent git from tracking changes to your trained plugin models
 
 ```shell
-./setup.sh
+./_scripts/setup.sh
 ```
 
 ### Compile
@@ -108,6 +108,6 @@ is bundled with the app, nor made available for download.
 ### Build your own suggestion plugin
 
 To create your customized insulin suggestions plugins using ml, see the
-[readme found in the `ml` module](ml/Readme.md).
+[readme found in the `ml` module](_ml/Readme.md).
 
 It's also possible to build a plugin manually, but no documentation is available for the time being.

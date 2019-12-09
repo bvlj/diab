@@ -1,0 +1,38 @@
+<!--
+  Copyright (c) 2019 Bevilacqua Joey
+
+  Licensed under the GNU GPLv3 license
+
+  The text of the license can be found in the LICENSE file
+  or at https://www.gnu.org/licenses/gpl.txt
+  -->
+<resources>
+
+    <!-- Style -->
+    <string name="settings_ui_theme_title">Style</string>
+    <string name="settings_ui_theme_system">Auto (system)</string>
+    <string name="settings_ui_theme_light">Light</string>
+    <string name="settings_ui_theme_dark">Dark</string>
+
+    <!-- Thresholds -->
+    <string name="settings_category_glucose_thresholds">Glucose thresholds</string>
+    <string name="settings_glucose_thresholds_high">High threshold</string>
+    <string name="settings_glucose_thresholds_low">Low threshold</string>
+
+    <!-- Fit -->
+    <string name="settings_fit_title">Fit integration</string>
+
+    <!-- Insulin -->
+    <string name="settings_category_insulin">Insulin</string>
+    <string name="settings_insulin_manage_title">Manage</string>
+    <string name="settings_insulin_manage_summary">Add, edit and remove your insulins</string>
+    <string name="settings_insulin_plugin_title">Suggestions</string>
+    <string name="settings_insulin_plugin_info">The suggestion plugin can be used to provide smart dosage hints basing on your previous dosages.\nDisclaimer: <b>do not</b> blindly rely on the hints as they are in no way a replacement of medical advice.</string>
+    <string name="settings_insulin_plugin_manage_title">Suggestions plugin</string>
+    <string name="settings_insulin_plugin_manage_summary_new">Install a plugin\u2026</string>
+    <string name="settings_insulin_plugin_manage_summary_installed">Plugin installed.\nLast updated: %1$s</string>
+    <string name="settings_insulin_plugin_installing">Installing\u2026</string>
+    <string name="settings_insulin_plugin_remove">Uninstall plugin</string>
+    <string name="settings_insulin_plugin_remove_confirmation">The insulin suggestions are going to be disabled until a new plugin is installed.\nThis action cannot be undone, do you want to proceed?</string>
+    <string name="settings_insulin_plugin_remove_confirmation_positive">Remove</string>
+</resources>

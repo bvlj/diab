@@ -1,0 +1,16 @@
+<!--
+  Copyright (c) 2018 Bevilacqua Joey
+
+  Licensed under the GNU GPLv3 license
+
+  The text of the license can be found in the LICENSE file
+  or at https://www.gnu.org/licenses/gpl.txt
+  -->
+<resources>
+    <dimen name="overview_graph_height">192sp</dimen>
+    <dimen name="overview_graph_text">6sp</dimen>
+    <dimen name="overview_graph_line_thickness">1dp</dimen>
+    <dimen name="overview_graph_offset">8dp</dimen>
+
+    <dimen name="item_glucose_indicator">24dp</dimen>
+</resources>

@@ -16,10 +16,10 @@ import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Icon
-import android.preference.PreferenceManager
 import androidx.annotation.DrawableRes
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
+import androidx.preference.PreferenceManager
 import it.diab.R
 import it.diab.core.util.Activities
 import it.diab.core.util.extensions.get
@@ -28,7 +28,7 @@ import it.diab.core.util.intentTo
 
 @RequiresApi(26)
 object ShortcutUtils {
-    private const val SHORTCUTS_VERSION = 1
+    private const val SHORTCUTS_VERSION = 2
     private const val KEY_SHORTCUTS = "pref_home_shortcuts"
     private val SHORTCUTS = arrayOf(this::buildAddGlucoseShortcut)
 
@@ -84,9 +84,7 @@ object ShortcutUtils {
             return drawable.bitmap
         }
 
-        if (drawable == null) {
-            throw IllegalArgumentException("Could not get a valid drawable from argument")
-        }
+        requireNotNull(drawable) { "Could not get a valid drawable from argument" }
 
         val bm = Bitmap.createBitmap(
             drawable.intrinsicWidth, drawable.intrinsicHeight,

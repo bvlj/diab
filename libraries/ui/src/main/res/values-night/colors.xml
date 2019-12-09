@@ -1,0 +1,31 @@
+<!--
+  Copyright (c) 2019 Bevilacqua Joey
+
+  Licensed under the GNU GPLv3 license
+
+  The text of the license can be found in the LICENSE file
+  or at https://www.gnu.org/licenses/gpl.txt
+  -->
+<resources>
+
+    <color name="colorPrimary">#121212</color>
+    <color name="colorPrimaryDark">#121212</color>
+    <color name="colorAccent">#32aaff</color>
+    <color name="colorAccentDark">#008cff</color>
+
+    <color name="textPrimary">#deFFFFFF</color>
+    <color name="textSecondary">#99FFFFFF</color>
+
+    <color name="navigationBar_color">@android:color/black</color>
+    <color name="navigationBar_divider">@android:color/black</color>
+
+    <color name="elevatedSurface">#232323</color>
+
+    <color name="headerShadow">@android:color/transparent</color>
+    <color name="importantShadow">@color/colorAccentLight</color>
+
+    <color name="contentDivider">#22FFFFFF</color>
+
+    <color name="listItem_fg">?android:textColorPrimary</color>
+    <color name="listItem_bg">#1cffffff</color>
+</resources>

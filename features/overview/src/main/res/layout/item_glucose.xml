@@ -1,0 +1,40 @@
+<!--
+  Copyright (c) 2018 Bevilacqua Joey
+
+  Licensed under the GNU GPLv3 license
+
+  The text of the license can be found in the LICENSE file
+  or at https://www.gnu.org/licenses/gpl.txt
+  -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:foreground="?attr/selectableItemBackground"
+    android:paddingStart="72dp"
+    android:paddingEnd="16dp">
+
+    <TextView
+        android:id="@+id/item_glucose_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/item_glucose_status"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="123 (19:02)\n6.5 Insulin, 20 Basal" />
+
+    <ImageView
+        android:id="@+id/item_glucose_status"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@color/glucoseIndicator_high" />
+</androidx.constraintlayout.widget.ConstraintLayout>

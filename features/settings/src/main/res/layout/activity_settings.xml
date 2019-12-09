@@ -1,0 +1,25 @@
+<!--
+  Copyright (c) 2019 Bevilacqua Joey
+
+  Licensed under the GNU GPLv3 license
+
+  The text of the license can be found in the LICENSE file
+  or at https://www.gnu.org/licenses/gpl.txt
+  -->
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/AppTheme.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"/>
+
+    <FrameLayout
+        android:id="@+id/settings_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?actionBarSize" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

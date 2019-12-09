@@ -1,0 +1,26 @@
+<!--
+  Copyright (c) 2019 Bevilacqua Joey
+
+  Licensed under the GNU GPLv3 license
+
+  The text of the license can be found in the LICENSE file
+  or at https://www.gnu.org/licenses/gpl.txt
+  -->
+<resources>
+
+    <!-- Insulin -->
+    <string name="insulin_list_title">Insuline</string>
+
+    <!-- Insulin Editor -->
+    <string name="insulin_editor_add">Aggungi insulina</string>
+    <string name="insulin_editor_edit">Modifica insulina</string>
+    <string name="insulin_editor_name">Nome</string>
+    <string name="insulin_editor_basal">Basale</string>
+    <string name="insulin_editor_half_units">Mezze unit\u00E0</string>
+    <string name="insulin_editor_save">Salva</string>
+
+    <string name="insulin_delete_title">Delete insulin</string>
+    <string name="insulin_delete_msg">Confermi l\'eliminazione di \"%1$s\"?\nQuest\'azione non pu\u00F3 essere annullata</string>
+    <string name="insulin_delete_values">Rimuovi anche tutti i valori associati nelle glicemie</string>
+    <string name="insulin_delete_positive">Rimuovi</string>
+</resources>

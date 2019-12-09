@@ -1,0 +1,19 @@
+<!--
+  Copyright (c) 2019 Bevilacqua Joey
+
+  Licensed under the GNU GPLv3 license
+
+  The text of the license can be found in the LICENSE file
+  or at https://www.gnu.org/licenses/gpl.txt
+  -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/component_editor_field_value_bg" />
+    <corners android:radius="@dimen/app_radius" />
+    <padding
+        android:bottom="8dp"
+        android:left="8dp"
+        android:right="8dp"
+        android:top="8dp" />
+</shape>
+

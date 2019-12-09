@@ -1,0 +1,38 @@
+<!--
+  Copyright (c) 2019 Bevilacqua Joey
+
+  Licensed under the GNU GPLv3 license
+
+  The text of the license can be found in the LICENSE file
+  or at https://www.gnu.org/licenses/gpl.txt
+  -->
+<resources>
+
+    <!-- Style -->
+    <string name="settings_ui_theme_title">Stile</string>
+    <string name="settings_ui_theme_system">Automatico (sistema)</string>
+    <string name="settings_ui_theme_light">Chiaro</string>
+    <string name="settings_ui_theme_dark">Scuro</string>
+
+    <!-- Thresholds -->
+    <string name="settings_category_glucose_thresholds">Soglie glicemiche</string>
+    <string name="settings_glucose_thresholds_high">Soglia iper</string>
+    <string name="settings_glucose_thresholds_low">Soglia ipo</string>
+
+    <!-- Fit -->
+    <string name="settings_fit_title">Integerazione Fit</string>
+
+    <!-- Insulin -->
+    <string name="settings_category_insulin">Insuline</string>
+    <string name="settings_insulin_manage_title">Gestisci</string>
+    <string name="settings_insulin_manage_summary">Aggiungi e modifica le tue insuline</string>
+    <string name="settings_insulin_plugin_title">Suggerimenti</string>
+    <string name="settings_insulin_plugin_info">Il plugin per i suggerimenti fornisce suggerimenti basandosi su i dosaggi precedenti.\nAttenzione: <b>non</b> basare le decisioni esclusivamente sulla base del suggerimento, in quanto non sostituisce in alcun modo il consiglio medico.</string>
+    <string name="settings_insulin_plugin_manage_title">Plugin suggerimenti</string>
+    <string name="settings_insulin_plugin_manage_summary_new">Installa un plugin\u2026</string>
+    <string name="settings_insulin_plugin_manage_summary_installed">Plugin installato.\nAggiornato il: %1$s</string>
+    <string name="settings_insulin_plugin_installing">Installazione\u2026</string>
+    <string name="settings_insulin_plugin_remove">Rimuovi plugin</string>
+    <string name="settings_insulin_plugin_remove_confirmation">I suggerimenti per l\'insulina saranno disattivati fino all\'installazione di un nuovo plugin.\nQuest\'azione non pu\u00F2 essere annullata, procedere?</string>
+    <string name="settings_insulin_plugin_remove_confirmation_positive">Rimuovi</string>
+</resources>

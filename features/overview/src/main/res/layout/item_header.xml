@@ -1,0 +1,67 @@
+<!--
+  Copyright (c) 2018 Bevilacqua Joey
+
+  Licensed under the GNU GPLv3 license
+
+  The text of the license can be found in the LICENSE file
+  or at https://www.gnu.org/licenses/gpl.txt
+  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/header_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:background="?selectableItemBackgroundBorderless"
+        android:contentDescription="@string/settings_name"
+        android:padding="16dp"
+        android:src="@drawable/ic_more" />
+
+    <TextView
+        android:id="@+id/header_last_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:maxLines="1"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="96sp"
+        tools:text="121" />
+
+    <TextView
+        android:id="@+id/header_last_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:maxLines="2"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:textAlignment="center"
+        android:textColor="?android:attr/textColorSecondary"
+        android:textSize="20sp"
+        tools:text="Last value (19:22)" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:clipToPadding="false"
+        android:outlineAmbientShadowColor="@color/headerShadow"
+        android:outlineSpotShadowColor="@color/headerShadow"
+        app:cardBackgroundColor="@color/elevatedSurface"
+        app:cardCornerRadius="@dimen/app_radius"
+        app:cardElevation="8dp"
+        app:contentPadding="2dp"
+        tools:targetApi="28">
+
+        <it.diab.overview.ui.graph.OverviewGraphView
+            android:id="@+id/header_chart"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/overview_graph_height" />
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

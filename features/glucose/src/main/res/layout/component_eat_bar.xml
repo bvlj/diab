@@ -1,0 +1,31 @@
+<!--
+  Copyright (c) 2019 Bevilacqua Joey
+
+  Licensed under the GNU GPLv3 license
+
+  The text of the license can be found in the LICENSE file
+  or at https://www.gnu.org/licenses/gpl.txt
+  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_editor_eat"
+        android:drawablePadding="16dp"
+        android:maxLines="1"
+        android:text="@string/glucose_editor_eat_level"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="24sp" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/eat_bar_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp" />
+
+</LinearLayout>

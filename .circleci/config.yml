@@ -3,7 +3,7 @@ version: 2.1
 executors:
   diab-android-executor:
     docker:
-      - image: circleci/android:api-28-alpha
+      - image: circleci/android:api-29
     environment:
       JVM_OPTS: "-Xmx1024m"
       GRADLE_OPTS: "-Dorg.gradle.daemon=false -Dorg.gradle.workers.max=2"
@@ -25,36 +25,17 @@ jobs:
       - store_artifacts:
           path: app/build/reports
           destination: app-reports
-      - store_artifacts:
-          path: core/build/reports
-          destination: core-reports
-      - store_artifacts:
-          path: data/build/reports
-          destination: data-reports
-      - store_artifacts:
-          path: export/build/reports
-          destination: export-reports
-      - store_artifacts:
-          path: glucose/build/reports
-          destination: glucose-reports
-      - store_artifacts:
-          path: insulin/build/reports
-          destination: insulin-reports
-      - store_artifacts:
-          path: settings/build/reports
-          destination: settings-reports
-      - store_artifacts:
-          path: ui/build/reports
-          destination: ui-reports
       # Store test results
       - store_test_results:
           path: app/build/test-results
       - store_test_results:
-          path: core/build/test-results
+          path: libraries/core/build/test-results
       - store_test_results:
-          path: data/build/test-results
+          path: libraries/data/build/test-results
       - store_test_results:
-          path: glucose/build/test-results
+          path: features/glucose/build/test-results
+      - store_test_results:
+          path: features/overview/build/test-results
       # Save build dir
       - persist_to_workspace:
           root: .

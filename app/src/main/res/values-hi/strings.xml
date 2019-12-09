@@ -9,19 +9,4 @@
 <resources>
     <string name="app_name">Diab</string>
     <string name="app_shortcut_add_glucose">ग्लूकोज जोड़ें</string>
-
-    <string name="fragment_overview">अवलोकन</string>
-    <string name="fragment_glucose">ग्लूकोस </string>
-    <string name="fragment_insulin">इंसुलिन</string>
-
-    <!-- Overview -->
-    <string name="overview_last_desc">अंतिम मान %1$s</string>
-    <string name="overview_last_fallback">नमस्ते</string>
-    <string name="overview_last_desc_fallback">नीले बटन को दबाकर एक मान जोड़ें</string>
-
-    <!-- Insulin -->
-    <string name="insulin_add_item">जोड़े</string>
-
-    <!-- Accessibility -->
-    <string name="a11y_overview_menu">विकल्प</string>
 </resources>

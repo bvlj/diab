@@ -1,0 +1,26 @@
+<!--
+  Copyright (c) 2019 Bevilacqua Joey
+
+  Licensed under the GNU GPLv3 license
+
+  The text of the license can be found in the LICENSE file
+  or at https://www.gnu.org/licenses/gpl.txt
+  -->
+<resources>
+
+    <!-- Insulin -->
+    <string name="insulin_list_title">Insulins</string>
+
+    <!-- Insulin Editor -->
+    <string name="insulin_editor_add">इंसुलिन जोड़े</string>
+    <string name="insulin_editor_edit">इंसुलिन संपादित करें</string>
+    <string name="insulin_editor_name">नाम</string>
+    <string name="insulin_editor_basal">बेसल</string>
+    <string name="insulin_editor_half_units">आधी इकाई</string>
+    <string name="insulin_editor_save">संरक्षित करे</string>
+
+    <string name="insulin_delete_title">Delete insulin</string>
+    <string name="insulin_delete_msg">Are you sure you want to delete insulin \"%1$s\"? This action cannot be undone</string>
+    <string name="insulin_delete_values">Also remove all its values from glucose readings</string>
+    <string name="insulin_delete_positive">Delete</string>
+</resources>

@@ -1,0 +1,19 @@
+<!--
+  Copyright (c) 2019 Bevilacqua Joey
+
+  Licensed under the GNU GPLv3 license
+
+  The text of the license can be found in the LICENSE file
+  or at https://www.gnu.org/licenses/gpl.txt
+  -->
+<ConstraintLayoutStates xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <State
+        android:id="@+id/editor_state_edit"
+        app:constraints="@layout/fragment_editor_edit" />
+
+    <State
+        android:id="@+id/editor_state_view"
+        app:constraints="@layout/fragment_editor_view" />
+</ConstraintLayoutStates>

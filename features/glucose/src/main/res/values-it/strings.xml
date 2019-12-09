@@ -1,0 +1,44 @@
+<!--
+  Copyright (c) 2019 Bevilacqua Joey
+
+  Licensed under the GNU GPLv3 license
+
+  The text of the license can be found in the LICENSE file
+  or at https://www.gnu.org/licenses/gpl.txt
+  -->
+<resources>
+
+    <!-- Glcuose Editor -->
+    <string name="glucose_editor_time_dialog">Seleziona la data</string>
+    <string name="glucose_editor_insulin_add">Aggiungi insulina</string>
+    <string name="glucose_editor_basal_add">Aggiungi basale</string>
+    <string name="glucose_editor_insulin_value">Quantit\u00E0</string>
+    <string name="glucose_editor_save_error">Controlla di nuovo i valori</string>
+    <string name="glucose_editor_date_pick">Seleziona un\'altra data\u2026</string>
+    <string name="glucose_editor_saved">Salvato</string>
+    <string name="glucose_editor_close">Chiudi</string>
+    <string name="glucose_editor_eat_level">Cibo assunto</string>
+
+    <!-- Glucose suggestions -->
+    <string name="insulin_suggestion_warning_low">Troppo bassa</string>
+    <string name="insulin_suggestion_warning_high">Troppo alta</string>
+    <string name="insulin_suggestion_value">Dose suggerita: %1$.1f</string>
+    <string name="insulin_suggestion_error">Impossibile determinare dose</string>
+    <string name="insulin_suggestion_applied">Suggerimento salvato</string>
+
+    <!-- Check again -->
+    <string name="check_again_suggestion_remind">Ricordami di ricontrollare</string>
+    <string name="check_again_notification_title">Controlla glicemia</string>
+    <string name="check_again_notification_content">I valori glicemici erano bassi poco fa, desideri controllarli nuovamente?</string>
+    <string name="check_again_notification_channel">Promemoria</string>
+
+    <!-- Time -->
+    <string name="time_today">Oggi</string>
+    <string name="time_yesterday">Ieri</string>
+
+    <!-- Insulin dialog -->
+    <string name="glucose_editor_insulin_apply">Applica</string>
+    <string name="glucose_editor_insulin_none">Nessuna insulina registrata</string>
+    <string name="glucose_editor_insulin_none_btn">Registra insuline</string>
+    <string name="glucose_editor_insulin_edit">Modifica insuline</string>
+</resources>

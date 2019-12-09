@@ -9,10 +9,4 @@
   -->
 <resources>
     <color name="ic_launcher_background">#243FE0</color>
-
-    <color name="overviewGraph_today">@color/colorAccentDark</color>
-    <color name="overviewGraph_average">@color/colorAccentLight</color>
-
-    <color name="glucoseIndicator_high">#ffcd80</color>
-    <color name="glucoseIndicator_low">#ff90b5</color>
 </resources>

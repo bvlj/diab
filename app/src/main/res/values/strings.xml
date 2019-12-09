@@ -9,19 +9,4 @@
 <resources>
     <string name="app_name">Diab</string>
     <string name="app_shortcut_add_glucose">Add glucose</string>
-
-    <string name="fragment_overview">Overview</string>
-    <string name="fragment_glucose">Glucose</string>
-    <string name="fragment_insulin">Insulin</string>
-
-    <!-- Overview -->
-    <string name="overview_last_desc">Last value%1$s</string>
-    <string name="overview_last_fallback">Hello</string>
-    <string name="overview_last_desc_fallback">Add a value by touching the blue button</string>
-
-    <!-- Insulin -->
-    <string name="insulin_add_item">Add</string>
-
-    <!-- Accessibility -->
-    <string name="a11y_overview_menu">Options</string>
 </resources>

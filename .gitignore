@@ -13,15 +13,15 @@
 /local.properties
 
 # ML
-/ml/.Python
-/ml/bin
-/ml/out
-/ml/export
-/ml/include
-/ml/lib
-/ml/out
-/ml/pip-selfcheck.json
-/ml/pyvenv.cfg
+/_ml/.Python
+/_ml/bin
+/_ml/out
+/_ml/export
+/_ml/include
+/_ml/lib
+/_ml/out
+/_ml/pip-selfcheck.json
+/_ml/pyvenv.cfg
 
 # Build
 app/release

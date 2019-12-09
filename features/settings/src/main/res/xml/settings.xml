@@ -1,0 +1,67 @@
+<!--
+  Copyright (c) 2018 Bevilacqua Joey
+
+  Licensed under the GNU GPLv3 license
+
+  The text of the license can be found in the LICENSE file
+  or at https://www.gnu.org/licenses/gpl.txt
+  -->
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <it.diab.settings.widgets.StylePreference
+        app:defaultValue="1"
+        app:icon="@drawable/ic_pref_dark_theme"
+        app:key="pref_ui_style"
+        app:summary="%s"
+        app:title="@string/settings_ui_theme_title" />
+
+    <it.diab.settings.widgets.ExportPreference
+        app:dialogMessage="@string/export_ask_xlsx_message"
+        app:dialogTitle="@string/export_ask_xlsx_title"
+        app:icon="@drawable/ic_pref_export"
+        app:key="pref_export_xlsx"
+        app:summary="@string/export_ask_xlsx_summary"
+        app:title="@string/export_ask_xlsx_title" />
+
+    <it.diab.settings.widgets.FitPreference
+        app:fragment="it.diab.settings"
+        app:key="pref_link_fit"
+        app:title="@string/settings_fit_title" />
+
+    <androidx.preference.PreferenceCategory app:title="@string/settings_category_glucose_thresholds">
+
+        <androidx.preference.SeekBarPreference
+            android:max="220"
+            app:defaultValue="180"
+            app:icon="@drawable/ic_pref_threshold"
+            app:key="pref_glucose_threshold_high"
+            app:min="160"
+            app:showSeekBarValue="true"
+            app:title="@string/settings_glucose_thresholds_high" />
+
+        <androidx.preference.SeekBarPreference
+            android:max="70"
+            app:defaultValue="60"
+            app:key="pref_glucose_threshold_low"
+            app:min="50"
+            app:showSeekBarValue="true"
+            app:title="@string/settings_glucose_thresholds_low" />
+
+    </androidx.preference.PreferenceCategory>
+
+    <androidx.preference.PreferenceCategory app:title="@string/settings_category_insulin">
+
+        <androidx.preference.Preference
+            app:icon="@drawable/ic_pref_insulin"
+            app:key="pref_link_insulin"
+            app:persistent="false"
+            app:summary="@string/settings_insulin_manage_summary"
+            app:title="@string/settings_insulin_manage_title" />
+
+        <androidx.preference.Preference
+            app:fragment="it.diab.settings.ui.PluginPrefsFragment"
+            app:key="pref_link_plugin"
+            app:title="@string/settings_insulin_plugin_title" />
+    </androidx.preference.PreferenceCategory>
+</androidx.preference.PreferenceScreen>

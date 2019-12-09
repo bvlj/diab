@@ -9,19 +9,21 @@
 
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
-apply plugin: 'kotlin-kapt'
+
+import it.diab.build.Config
+import it.diab.build.Deps.Feature
+import it.diab.build.Deps.Lib
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion Config.compileSdk
 
     defaultConfig {
-        applicationId "it.diab"
-        minSdkVersion 23
-        targetSdkVersion 28
+        applicationId Config.packageName
+        minSdkVersion Config.minSdk
+        targetSdkVersion Config.targetSdk
 
         versionCode 380
-        versionName "1.3.2"
+        versionName Config.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -35,7 +37,7 @@ android {
 
         release {
             minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 
@@ -51,18 +53,15 @@ android {
 }
 
 dependencies {
-    implementation project(':core')
-    implementation project(':data')
-    implementation project(':ui')
-    implementation project(':glucose')
-    implementation project(':insulin')
-    implementation project(':settings')
-    googleFitImplementation project(':googlefit')
+    implementation project(Lib.core)
+    implementation project(Lib.ui)
 
-    // UI
-    implementation "androidx.cardview:cardview:1.0.0"
+    implementation project(Feature.overview)
+    implementation project(Feature.glucose)
+    implementation project(Feature.insulin)
+    implementation project(Feature.settings)
 
-    implementation "com.github.PhilJay:MPAndroidChart:v3.0.3"
+    googleFitImplementation project(Feature.googleFit)
 }
 
 // Testing dependencies

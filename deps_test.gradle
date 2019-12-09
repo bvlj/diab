@@ -7,10 +7,14 @@
  * or at https://www.gnu.org/licenses/gpl.txt
  */
 
+import it.diab.build.Deps.AndroidX
+import it.diab.build.Deps.Ext
+
 dependencies {
-    androidTestImplementation 'androidx.arch.core:core-testing:2.0.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-intents:3.1.1'
-    testImplementation 'junit:junit:4.12'
+    androidTestImplementation AndroidX.Test.core
+    androidTestImplementation AndroidX.Test.Espresso.core
+    androidTestImplementation AndroidX.Test.Espresso.contrib
+    androidTestImplementation AndroidX.Test.Espresso.intents
+    androidTestImplementation Ext.mockito
+    testImplementation Ext.junit4
 }

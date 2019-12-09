@@ -27,12 +27,11 @@
 # AndroidViewModel
 -keep class * extends androidx.lifecycle.AndroidViewModel { <init>(...); }
 
-# Coroutines
--keepclassmembernames class kotlinx.** { volatile <fields>; }
--keepnames class kotlinx.coroutines.internal.MainDispatcherFactory {}
--keepnames class kotlinx.coroutines.CoroutineExceptionHandler {}
--keep class kotlinx.coroutines.android.AndroidExceptionPreHandler { *; }
--keep class kotlinx.coroutines.android.AndroidDispatcherFactory { *; }
+# Ensure the custom, fast service loader implementation is removed.
+-assumevalues class kotlinx.coroutines.internal.MainDispatcherLoader {
+  boolean FAST_SERVICE_LOADER_ENABLED return false;
+}
+# -checkdiscard class kotlinx.coroutines.internal.FastServiceLoader
 
 # Keep fitness classes
 -keep class it.diab.fit.** {}

@@ -1,0 +1,116 @@
+<!--
+  Copyright (c) 2019 Bevilacqua Joey
+
+  Licensed under the GNU GPLv3 license
+
+  The text of the license can be found in the LICENSE file
+  or at https://www.gnu.org/licenses/gpl.txt
+  -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/editor_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@id/editor_close"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_margin="8dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:contentDescription="@string/glucose_editor_close"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@id/editor_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:maxLines="1"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="96sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="121" />
+
+    <TextView
+        android:id="@id/editor_time"
+        style="@style/AppTheme.GlucoseEditor_Value"
+        android:drawableStart="@drawable/ic_editor_time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editor_value"
+        tools:text="04-08-2017 18:54" />
+
+    <it.diab.glucose.widget.EatBar
+        android:id="@id/editor_eat_level"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_editor_field_value"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editor_time" />
+
+    <TextView
+        android:id="@id/editor_insulin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editor_eat_level"
+        tools:text="Insulin 2.5"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@id/editor_basal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editor_insulin"
+        tools:text="Basal 20"
+        tools:visibility="visible" />
+
+    <it.diab.glucose.suggestion.ui.SuggestionView
+        android:id="@id/editor_suggestion"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingTop="0dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editor_basal"
+        tools:visibility="visible" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@id/editor_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:outlineAmbientShadowColor="@color/importantShadow"
+        android:outlineSpotShadowColor="@color/importantShadow"
+        android:transitionName="@string/transition_glucose_fab"
+        app:layout_constraintBottom_toTopOf="@id/editor_keyboard"
+        app:layout_constraintEnd_toEndOf="@id/editor_keyboard"
+        app:srcCompat="@drawable/ic_done"
+        tools:targetApi="28" />
+
+    <it.diab.glucose.widget.NumericKeyboardView
+        android:id="@id/editor_keyboard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

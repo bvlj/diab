@@ -1,0 +1,38 @@
+<!--
+  Copyright (c) 2019 Bevilacqua Joey
+
+  Licensed under the GNU GPLv3 license
+
+  The text of the license can be found in the LICENSE file
+  or at https://www.gnu.org/licenses/gpl.txt
+  -->
+<resources>
+    <!-- Theme attrs -->
+    <attr name="diab_actionBarBackground" format="color" />
+    <attr name="diab_actionIconDefault" format="color" />
+    <attr name="diab_actionIconInverted" format="color" />
+    <attr name="diab_dividerColor" format="color" />
+    <attr name="diab_editorBackground" format="color" />
+    <attr name="diab_editorFormIcon" format="color" />
+    <attr name="diab_importantBackground" format="color" />
+    <attr name="diab_importantForeground" format="color" />
+    <attr name="diab_itemBackground" format="color" />
+    <attr name="diab_itemForeground" format="color" />
+    <attr name="diab_rippleColor" format="color" />
+    <attr name="diab_titleContrastColor" format="color" />
+
+    <!-- RecylerviewExt -->
+    <declare-styleable name="RecyclerViewExt">
+        <attr name="gridLayout" format="boolean" />
+        <attr name="gridColumns" format="integer" />
+    </declare-styleable>
+
+    <!-- Time header decorator -->
+    <declare-styleable name="TimeHeader">
+        <attr name="android:width" />
+        <attr name="android:padding" />
+        <attr name="android:textColor" />
+        <attr name="dayTextSize" format="dimension" />
+        <attr name="monthTextSize" format="dimension" />
+    </declare-styleable>
+</resources>

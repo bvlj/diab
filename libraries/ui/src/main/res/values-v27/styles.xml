@@ -1,0 +1,39 @@
+<!--
+  Copyright (c) 2019 Bevilacqua Joey
+
+  Licensed under the GNU GPLv3 license
+
+  The text of the license can be found in the LICENSE file
+  or at https://www.gnu.org/licenses/gpl.txt
+  -->
+<resources>
+
+    <style name="AppTheme" parent="DiabTheme">
+        <item name="bottomSheetDialogTheme">@style/AppTheme.BottomSheetDialog</item>
+        <item name="buttonBarButtonStyle">@style/AppTheme.DialogButton</item>
+        <item name="buttonBarPositiveButtonStyle">@style/AppTheme.DialogButton</item>
+        <item name="buttonBarNegativeButtonStyle">@style/AppTheme.DialogButton</item>
+        <item name="buttonBarNeutralButtonStyle">@style/AppTheme.DialogButton.Flush</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorSecondary">?attr/colorAccent</item>
+        <item name="colorOnSecondary">?attr/diab_importantForeground</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="dialogCornerRadius">@dimen/app_radius</item>
+        <item name="isLightTheme">@bool/is_light</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="android:navigationBarColor">@color/navigationBar_color</item>
+        <item name="android:navigationBarDividerColor">@color/navigationBar_divider</item>
+        <item name="android:textColorPrimary">@color/textPrimary</item>
+        <item name="android:textColorSecondary">@color/textSecondary</item>
+        <item name="android:windowBackground">@color/backgroundSurface</item>
+        <item name="android:windowLightStatusBar">@bool/is_light</item>
+        <item name="android:windowLightNavigationBar">@bool/is_light</item>
+    </style>
+
+    <style name="AppTheme.BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppTheme.ModalStyle</item>
+        <item name="android:navigationBarColor">@color/navigationBar_color</item>
+        <item name="android:navigationBarDividerColor">@color/navigationBar_color</item>
+    </style>
+</resources>

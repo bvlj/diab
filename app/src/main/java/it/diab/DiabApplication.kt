@@ -9,7 +9,7 @@
 package it.diab
 
 import android.app.Application
-import android.preference.PreferenceManager
+import androidx.preference.PreferenceManager
 import it.diab.core.util.Activities.Settings.PREF_UI_STYLE
 import it.diab.core.util.extensions.get
 import it.diab.ui.util.UIUtils
