@@ -22,7 +22,7 @@ android {
         minSdkVersion Config.minSdk
         targetSdkVersion Config.targetSdk
 
-        versionCode 380
+        versionCode 491
         versionName Config.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"

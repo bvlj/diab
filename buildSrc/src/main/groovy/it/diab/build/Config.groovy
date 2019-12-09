@@ -15,5 +15,5 @@ class Config {
     public static final int minSdk = 23
     public static final int targetSdk = 29
 
-    public static final String versionName = "1.3"
+    public static final String versionName = "1.3.5"
 }

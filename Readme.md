@@ -6,7 +6,7 @@
 
 <p align="center">
 <a href="https://gitlab.com/bvlj/diab/pipelines"><img src="https://gitlab.com/bvlj/diab/badges/staging/build.svg" alt="Gitlab Pipeline"></a>
-<a href="https://circleci.com/gh/bvlj/diab/tree/staging"><img src="https://circleci.com/gh/bvlj/diab/tree/staging.svg?style=svg" alt="CircleCI"></a>
+<a href="https://circleci.com/gh/bvlj/diab/tree/master"><img src="https://circleci.com/gh/bvlj/diab/tree/master.svg?style=svg" alt="CircleCI"></a>
 <a href="https://codeclimate.com/github/bvlj/diab/maintainability"><img src="https://api.codeclimate.com/v1/badges/017008168f8e5910c7c2/maintainability" alt="Maintainability"></a>
 <a href="https://ktlint.github.io/"><img src="https://img.shields.io/badge/code%20style-%E2%9D%A4-FF4081.svg" alt="ktlint"></a>
 </p>
