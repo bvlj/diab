@@ -95,7 +95,7 @@ class OverviewViewModelTest {
             graphData as GraphData.Available
             Assert.assertEquals(
                 glucoseValues.average().toFloat(),
-                graphData.average[testTimeFrame.ordinal].y
+                graphData.average[testTimeFrame.ordinal - 1].y
             )
         })
 
