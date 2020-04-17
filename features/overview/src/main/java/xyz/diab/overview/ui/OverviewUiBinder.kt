@@ -21,23 +21,19 @@ import android.graphics.Typeface
 import android.text.style.ForegroundColorSpan
 import android.text.style.RelativeSizeSpan
 import android.text.style.StyleSpan
-import android.view.View
-import android.widget.TextView
 import androidx.annotation.ColorInt
-import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.text.buildSpannedString
 import androidx.core.text.inSpans
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.CoroutineScope
 import xyz.diab.core.extension.fmt
 import xyz.diab.core.model.Glucose
 import xyz.diab.overview.R
 import xyz.diab.overview.adapter.OverviewListAdapter
+import xyz.diab.overview.databinding.UiOverviewBinding
 import xyz.diab.roboto.events.EventBus
 import xyz.diab.ui.extension.endl
 import xyz.diab.ui.extension.getColorAttr
@@ -48,35 +44,29 @@ import xyz.diab.ui.widget.recyclerview.SwipeToDeleteCallback
 import xyz.diab.ui.widget.recyclerview.TimeHeaderDecoration
 
 internal class OverviewUiBinder(
-    view: View,
+    private val binding: UiOverviewBinding,
     private val bus: EventBus,
     scope: CoroutineScope
 ) : OverviewListAdapter.Callbacks {
-    private val coordLayout: CoordinatorLayout =
-        view.findViewById(R.id.overviewCoordinator)
-    private val lastView: TextView =
-        view.findViewById(R.id.overviewLast)
-    private val recyclerView: RecyclerView =
-        view.findViewById(R.id.overviewList)
-    private val addFab: FloatingActionButton =
-        view.findViewById(R.id.addButton)
 
     private var snackBar: Snackbar? = null
 
     private val listAdapter = OverviewListAdapter(this)
 
     init {
-        recyclerView.apply {
-            itemAnimator = DefaultItemAnimator()
-            layoutManager = LinearLayoutManager(context)
-            adapter = listAdapter
-            addItemDecoration(DeleteItemDecorator(context))
-        }
+        binding.apply {
+            listView.apply {
+                itemAnimator = DefaultItemAnimator()
+                layoutManager = LinearLayoutManager(context)
+                adapter = listAdapter
+                addItemDecoration(DeleteItemDecorator(context))
+            }
 
-        setupRecyclerViewItemTouchHelper()
+            setupRecyclerViewItemTouchHelper()
 
-        addFab.setOnClickListener {
-            onItemClicked(-1L)
+            addBtn.setOnClickListener {
+                onItemClicked(-1L)
+            }
         }
 
         bus.subscribe(OverviewEvent::class, scope) {
@@ -95,26 +85,30 @@ internal class OverviewUiBinder(
     private fun onDataChanged(list: List<Glucose>) {
         listAdapter.submitList(list)
 
-        recyclerView.apply {
-            removeItemDecorationByClass(TimeHeaderDecoration::class.java)
-            addItemDecoration(
-                TimeHeaderDecoration(context, list.map(Glucose::timeStamp))
-            )
-        }
+        binding.apply {
+            listView.apply {
+                removeItemDecorationByClass(TimeHeaderDecoration::class.java)
+                addItemDecoration(
+                    TimeHeaderDecoration(context, list.map(Glucose::timeStamp))
+                )
+            }
 
-        updateHeader(list.firstOrNull())
+            updateHeader(list.firstOrNull())
+        }
     }
 
-    private fun updateHeader(item: Glucose?) {
-        val res = lastView.resources
-        val secondaryColor = lastView.context.getColorAttr(
-            R.style.AppTheme,
-            android.R.attr.textColorSecondary
-        )
-        lastView.text = if (item == null)
-            getHeaderEmptySpan(res, secondaryColor)
-        else
-            getHeaderItemSpan(res, secondaryColor, item)
+    private fun UiOverviewBinding.updateHeader(item: Glucose?) {
+        lastView.apply {
+            val secondaryColor = context.getColorAttr(
+                R.style.AppTheme,
+                android.R.attr.textColorSecondary
+            )
+
+            text = if (item == null)
+                getHeaderEmptySpan(resources, secondaryColor)
+            else
+                getHeaderItemSpan(resources, secondaryColor, item)
+        }
     }
 
     private fun getHeaderEmptySpan(res: Resources, @ColorInt secondaryColor: Int) =
@@ -141,21 +135,24 @@ internal class OverviewUiBinder(
             }
         }
 
-    private fun setupRecyclerViewItemTouchHelper() {
+    private fun UiOverviewBinding.setupRecyclerViewItemTouchHelper() {
         val swipeListener = object : SwipeStartCallback.Listener {
             override fun onSwipeToStart(id: Long) {
                 bus.emit(OverviewEvent::class, OverviewEvent.DeleteItem(id))
             }
         }
-        val helper = ItemTouchHelper(SwipeToDeleteCallback(recyclerView.context, swipeListener))
-        helper.attachToRecyclerView(recyclerView)
+        val helper = ItemTouchHelper(SwipeToDeleteCallback(listView.context, swipeListener))
+        helper.attachToRecyclerView(listView)
     }
 
     private fun onItemDeleted(item: Glucose) {
         snackBar?.dismiss()
 
-        snackBar = Snackbar.make(coordLayout, R.string.overview_item_deleted, Snackbar.LENGTH_LONG)
-            .setAction(R.string.action_undo) {
+        snackBar = Snackbar.make(
+            binding.coordinator,
+            R.string.overview_item_deleted,
+            Snackbar.LENGTH_LONG
+        ).setAction(R.string.action_undo) {
                 bus.emit(OverviewEvent::class, OverviewEvent.DeletionUndone(item))
             }
             .apply(Snackbar::show)

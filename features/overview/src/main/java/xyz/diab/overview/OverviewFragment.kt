@@ -25,6 +25,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 import xyz.diab.core.model.Glucose
+import xyz.diab.overview.databinding.UiOverviewBinding
 import xyz.diab.overview.ui.OverviewEvent
 import xyz.diab.overview.ui.OverviewUiBinder
 import xyz.diab.overview.viewmodel.OverviewViewModel
@@ -35,6 +36,9 @@ import xyz.diab.roboto.navigation.NavigationTarget
 class OverviewFragment : BaseFragment() {
 
     private lateinit var viewModel: OverviewViewModel
+    private var _binding: UiOverviewBinding? = null
+    private val binding: UiOverviewBinding
+        get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,12 +54,20 @@ class OverviewFragment : BaseFragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? = inflater.inflate(R.layout.ui_overview, container, false)
+    ): View? {
+        _binding = UiOverviewBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onDestroyView() {
+        _binding = null
+        super.onDestroyView()
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        OverviewUiBinder(view, bus, viewScope)
+        OverviewUiBinder(binding, bus, viewScope)
         viewModel.liveList.observe(viewLifecycleOwner, Observer {
             bus.emit(OverviewEvent::class, OverviewEvent.DataChanged(it))
         })

@@ -72,17 +72,9 @@ class Deps {
         }
     }
 
-    // Dagger - https://github.com/google/dagger/releases
-    class Dagger {
-        private static final String VERSION = "2.27"
-
-        public static final String daggerAndroid = "com.google.dagger:dagger-android:$VERSION"
-        public static final String daggerCompiler = "com.google.dagger:dagger-compiler:$VERSION"
-    }
-
     // Kotlin - https://github.com/JetBrains/kotlin/releases
     class Kotlin {
-        private static final String VERSION = "1.3.71"
+        private static final String VERSION = "1.3.72"
 
         class StdLib {
 

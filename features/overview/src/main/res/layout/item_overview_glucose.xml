@@ -20,29 +20,30 @@
     android:layout_height="64dp"
     android:foreground="?attr/selectableItemBackground"
     android:paddingStart="72dp"
-    android:paddingEnd="16dp">
+    android:paddingEnd="16dp"
+    tools:viewBindingIgnore="true">
 
     <TextView
-        android:id="@+id/itemOverviewInfo"
+        android:id="@+id/infoView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:maxLines="2"
         android:textColor="?android:attr/textColorPrimary"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/itemOverviewTime"
+        app:layout_constraintEnd_toStartOf="@id/timeView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="123\n6.5 Insulin, 20 Basal" />
 
     <TextView
-        android:id="@+id/itemOverviewTime"
+        android:id="@+id/timeView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:maxLines="1"
         android:textColor="?android:attr/textColorSecondary"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/itemOverviewInfo"
+        app:layout_constraintTop_toTopOf="@id/infoView"
         tools:text="19:02" />
 </androidx.constraintlayout.widget.ConstraintLayout>

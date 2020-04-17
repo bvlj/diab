@@ -39,8 +39,8 @@ internal class OverviewItemViewHolder(
     container: View
 ) : RecyclerView.ViewHolder(container) {
 
-    private val infoView: AppCompatTextView = container.findViewById(R.id.itemOverviewInfo)
-    private val timeView: AppCompatTextView = container.findViewById(R.id.itemOverviewTime)
+    private val infoView: AppCompatTextView = container.findViewById(R.id.infoView)
+    private val timeView: AppCompatTextView = container.findViewById(R.id.timeView)
 
     private val secondaryTextColor =
         itemView.context.getColorAttr(R.style.AppTheme, android.R.attr.textColorSecondary)

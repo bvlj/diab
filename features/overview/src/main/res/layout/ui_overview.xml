@@ -15,7 +15,7 @@
   -->
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/overviewCoordinator"
+    android:id="@+id/coordinator"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -29,7 +29,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/overviewLast"
+                android:id="@+id/lastView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="32dp"
@@ -40,7 +40,7 @@
                 tools:text="123\nLast value" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/overviewList"
+                android:id="@+id/listView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:nestedScrollingEnabled="true"
@@ -49,7 +49,7 @@
     </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/addButton"
+        android:id="@+id/addBtn"
         style="@style/AppTheme.FAB"
         android:layout_width="56dp"
         android:layout_height="56dp"
