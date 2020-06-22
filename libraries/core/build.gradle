@@ -28,8 +28,8 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                implementation Kotlin.StdLib.common
-                implementation Kotlin.Coroutines.common
+                api Kotlin.StdLib.common
+                api Kotlin.Coroutines.common
             }
         }
         commonTest {

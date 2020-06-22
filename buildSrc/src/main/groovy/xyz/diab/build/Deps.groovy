@@ -34,7 +34,7 @@ class Deps {
         public static final String fragment = "androidx.fragment:fragment-ktx:1.2.4"
 
         // Core - KTX - https://developer.android.com/jetpack/androidx/releases/core
-        public static final String ktx = "androidx.core:core-ktx:1.2.0"
+        public static final String ktx = "androidx.core:core-ktx:1.3.0"
 
         // Material Design - https://material.io/develop - https://github.com/material-components/material-components-android/releases
         public static final String material = "com.google.android.material:material:1.1.0"
@@ -70,6 +70,13 @@ class Deps {
             public static final String ktx = "androidx.room:room-ktx:$VERSION"
             public static final String runtime = "androidx.room:room-runtime:$VERSION"
         }
+    }
+
+    class FastExcel {
+        private static final String VERSION = "0.10.12"
+
+        public static final String reader = "org.dhatim:fastexcel-reader:$VERSION"
+        public static final String writer = "org.dhatim:fastexcel:$VERSION"
     }
 
     // Kotlin - https://github.com/JetBrains/kotlin/releases
